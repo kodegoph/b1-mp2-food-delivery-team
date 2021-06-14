@@ -51,5 +51,23 @@
 @import "~bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
+@import "~boxicons";
+// scss-boxicons
+.me-main{
+    margin-left: 104px
+}
+.bg-color{
+    background-color: #242230;
+}
+.font-primary{
+    color: white;
+}
+@media (min-width: 768px) {
+    .me-main{
+        margin-left: 200px
+    }
+}
+@import "aside";
 @import "art";
 @import "angelo";
+@import "james";
