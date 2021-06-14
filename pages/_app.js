@@ -1,4 +1,5 @@
-import Layout from '../components/Layout'
+import Layout from './components/Layout'
+import '../assets/css/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
