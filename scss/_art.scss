@@ -3,3 +3,68 @@
   border-radius: 10px;
   padding: 1.5rem;
 }
+#search-and-profile{
+  .x-icon{
+    top: 15px;
+    right: 15px;
+    color: $color-primary;
+  }
+  .x-icon:hover{
+    top: 15px;
+    right: 15px;
+    color: $color-primary-hover;
+  }
+  .search-order{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  .search-order:hover{
+    border: 1px solid $color-primary;
+  }
+  .search-order:active{
+    border: 1px solid $color-primary-hover;
+  }
+  .mapboxgl-map{
+    border-radius: 10px;
+    height: 877px !important;
+  }
+  .bg-badge-secondary{
+    background-color: $color-primary;
+  }
+}
+#profile{
+  .profile-description{
+    max-width: 400px;
+  }
+  .profile-label{
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+  }
+  .picture-div{
+    .img-profile{
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+    }
+    input{
+      font-size: 13px;
+    }
+  }
+  .text-input{
+    padding: 10px 16px;
+    border-radius: 10px;
+    max-width: 400px;
+  }
+  .divider-hr{
+    border: none;
+    height: 1px;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 255);
+    color: #DFE3ED;
+    margin-top: 24px;
+  }
+}

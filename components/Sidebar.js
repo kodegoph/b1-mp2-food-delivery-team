@@ -42,13 +42,15 @@ const Sidebar = () => {
                 </a>
               </div>
             </div>
-            <a
-              className="p-3 d-flex align-content-center justify-content-center"
-              href=""
-            >
-              <p className="d-none d-md-block my-auto me-2">Welcome, User</p>
-              <i class="bx bxs-user-circle bx-md"></i>
-            </a>
+            <Link href="/profile">
+              <a
+                className="p-3 d-flex align-content-center justify-content-center"
+                href=""
+              >
+                <p className="d-none d-md-block my-auto me-2">Welcome, User</p>
+                <i class="bx bxs-user-circle bx-md"></i>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

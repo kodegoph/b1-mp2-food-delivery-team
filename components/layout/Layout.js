@@ -1,10 +1,9 @@
-import Header from "../Header";
 import Sidebar from "../Sidebar";
 import Footer from "../Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div className="wrapper">
+    <div className="bg-color">
       <Sidebar />
       {/* page content */}
       {children}

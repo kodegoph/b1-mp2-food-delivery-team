@@ -1,4 +1,15 @@
+import * as React from "react";
+import ReactMapGL from "react-map-gl";
+import { useState } from "react";
+import JSONDATA from "../public/data/MOCK_DATA.json";
+
 export const Booking = () => {
+  const [viewport, setViewport] = React.useState({
+    latitude: 37.7577,
+    longitude: -122.4376,
+    zoom: 8,
+  });
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <main className="me-main p-4 h-100 bg-color font-primary">
       <section id="search-and-profile" className="mb-4">
@@ -6,7 +17,7 @@ export const Booking = () => {
           <div className="row">
             <div className="col-12 col-md-6 col-xl-8">
               <div className="search-input d-flex w-100 mb-3 position-relative">
-                <a href="" type="reset" className="position-absolute">
+                <a href="" type="reset" className="position-absolute x-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -20,17 +31,40 @@ export const Booking = () => {
                 </a>
                 <input
                   id="searchId"
-                  type="number"
-                  placeholder="Enter Order ID"
+                  type="text"
+                  className="search-order"
+                  placeholder="Enter Restaurant/Order ID"
+                  onChange={(event) => {
+                    setSearchTerm(event.target.value);
+                  }}
                 />
               </div>
               <div className="row">
                 <div className="col-12 col-md-6 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-between">
                   <div className="food-header d-flex">
                     <h2 className="me-3 mb-0">Food Delivery</h2>
-                    <p id="search-result" className="mb-0 align-self-end">
-                      123 results
-                    </p>
+                    {JSONDATA.filter((val) => {
+                      if (searchTerm == "") {
+                        return (val = "");
+                      } else if (
+                        val.restaurant_name
+                          .toLowerCase()
+                          .includes(searchTerm.toLowerCase()) &&
+                        val.is_pending == true
+                      ) {
+                        return val;
+                      }
+                    }).map((val, key) => {
+                      return (
+                        <p
+                          id="search-result"
+                          className="mb-0 align-self-end"
+                          key={key}
+                        >
+                          results
+                        </p>
+                      );
+                    })}
                   </div>
                 </div>
                 <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
@@ -42,77 +76,51 @@ export const Booking = () => {
                   </a>
                 </div>
               </div>
-              <div className="col-12 order-card bg-card-booking mb-3">
-                <div className="row">
-                  <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
-                    <img src="https://picsum.photos/id/237/120/144" alt="" />
-                  </div>
-                  <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
-                    <div className="badges">
-                      <span className="badge bg-badge-secondary">Pro</span>
+              {JSONDATA.filter((val) => {
+                if (searchTerm == "") {
+                  return (val = "");
+                } else if (
+                  val.restaurant_name
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase()) &&
+                  val.is_pending == true
+                ) {
+                  return val;
+                }
+              }).map((val, key) => {
+                return (
+                  <div
+                    className="col-12 order-card bg-card-booking mb-3"
+                    key={key}
+                  >
+                    <div className="row">
+                      <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
+                        <img src={val.img} alt={val.restaurant_name} />
+                      </div>
+                      <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
+                        <div className="badges">
+                          <span className="badge bg-badge-secondary">Pro</span>
+                        </div>
+                        <h4>{val.restaurant_name}</h4>
+                        <h6>
+                          Order Number: <span id="order-num">{val.id}</span>
+                        </h6>
+                        <button className="btn bg-secondary">Complete</button>
+                      </div>
                     </div>
-                    <h4>Doggy Land</h4>
-                    <h6>
-                      Order Number: <span id="order-num">12312312</span>
-                    </h6>
-                    <button className="btn bg-secondary">Complete</button>
                   </div>
-                </div>
-              </div>
-              <div className="col-12 order-card bg-card-booking mb-3">
-                <div className="row">
-                  <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
-                    <img src="https://picsum.photos/id/237/120/144" alt="" />
-                  </div>
-                  <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
-                    <div className="badges">
-                      <span className="badge bg-badge-secondary">Pro</span>
-                    </div>
-                    <h4>Doggy Land</h4>
-                    <h6>
-                      Order Number: <span id="order-num">12312312</span>
-                    </h6>
-                    <button>Complete</button>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 order-card bg-card-booking mb-3">
-                <div className="row">
-                  <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
-                    <img src="https://picsum.photos/id/237/120/144" alt="" />
-                  </div>
-                  <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
-                    <div className="badges">
-                      <span className="badge bg-badge-secondary">Pro</span>
-                    </div>
-                    <h4>Doggy Land</h4>
-                    <h6>
-                      Order Number: <span id="order-num">12312312</span>
-                    </h6>
-                    <button>Complete</button>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 order-card bg-card-booking mb-3">
-                <div className="row">
-                  <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
-                    <img src="https://picsum.photos/id/237/120/144" alt="" />
-                  </div>
-                  <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
-                    <div className="badges">
-                      <span className="badge bg-badge-secondary">Pro</span>
-                    </div>
-                    <h4>Doggy Land</h4>
-                    <h6>
-                      Order Number: <span id="order-num">12312312</span>
-                    </h6>
-                    <button>Complete</button>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
             <div className="col-12 col-md-6 col-xl-4">
-              <div className="dummy-box-1 w-100"></div>
+              <ReactMapGL
+                mapStyle="mapbox://styles/mapbox/streets-v11"
+                mapboxApiAccessToken={process.env.MAPBOX_KEY}
+                {...viewport}
+                width="100%"
+                height="100%"
+                onViewportChange={(viewport) => setViewport(viewport)}
+              />
             </div>
           </div>
         </div>
