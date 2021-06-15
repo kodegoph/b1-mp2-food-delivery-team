@@ -12,7 +12,9 @@ const forgotpass = () => {
                                 placeholder="email@example.com"></input>
                         </form>
                         <button className="btn-pass">
-                            Send change password link
+                            <a href="mail.google.com">
+                                Send change password link
+                            </a>
                         </button>
                     </div>
                 </div>

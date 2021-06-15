@@ -1,15 +1,14 @@
+import Scheduler from "../components/Scheduler";
 export const Calendar = () => {
     return (
         <main className="me-main p-4 h-100 bg-color font-primary">
             <section>
                 <div className="container-fluid">
-                    <div className="col-xxl-8">
+                    <div className="col-xxl-12">
                         <div className="row">
-                            <div className="col-md-4">
-                                <h1>My Schedule</h1>
-                            </div>
-                            <div className="col-md-4 d-flex justify-content-end">
-                                <form action="" className="col-6">
+                            <div className="col-md-4 ">
+                                <h2>My Schedule</h2>
+                                <form action="" className="col-6 pt-0">
                                     <input
                                         type="search"
                                         className="form-control"
@@ -18,14 +17,11 @@ export const Calendar = () => {
                                 </form>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-md-8">
-                                <div className="card">
-                                    <div className="calendar-container">
-                                        <div id="calendar"></div>
-                                    </div>
-                                </div>
+                        <div className="row d-flex justify-content-around">
+                            <div className="col-md-7 ">
+                                <Scheduler />
                             </div>
+
                             <div className="col-md-4">
                                 <div className="month">
                                     <ul>
@@ -83,7 +79,6 @@ export const Calendar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xxl-4"></div>
                 </div>
             </section>
         </main>

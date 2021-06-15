@@ -59,13 +59,13 @@ h2 {
         margin-bottom: 20px;
     }
 }
-h1 {
-    font-size: 24px;
-}
-h2 {
-    font-size: 16px;
-    color: #5372e7;
-}
+// h1 {
+//     font-size: 24px;
+// }
+// h2 {
+//     font-size: 16px;
+//     color: #5372e7;
+// }
 
 #side-menu {
     width: 240px;
@@ -230,4 +230,11 @@ input {
 }
 .btn-pass:hover {
     background-color: $color-primary-hover;
+}
+a.forgotpass {
+    justify-content: end;
+    align-items: flex-end;
+}
+Scheduler {
+    border-radius: 5px;
 }
