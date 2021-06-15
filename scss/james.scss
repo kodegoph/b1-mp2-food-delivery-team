@@ -1,20 +1,5 @@
-a {
-    -webkit-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    transition: 0.3s all ease;
-}
-a,
-a:hover {
-    text-decoration: none !important;
-}
 
-.content {
-    padding: 7rem 0;
-}
 
-h2 {
-    font-size: 20px;
-}
 
 .form-control:active,
 .form-control:focus {
@@ -59,13 +44,13 @@ h2 {
         margin-bottom: 20px;
     }
 }
-h1 {
-    font-size: 24px;
-}
-h2 {
-    font-size: 16px;
-    color: #5372e7;
-}
+// h1 {
+//     font-size: 24px;
+// }
+// h2 {
+//     font-size: 16px;
+//     color: #5372e7;
+// }
 
 #side-menu {
     width: 240px;
@@ -204,4 +189,34 @@ body {
     padding-top: 1em;
     padding-left: 1em;
     padding-right: 1em;
+}
+.card-change {
+    padding: 2rem;
+    width: 50%;
+    height: fit-content;
+    border: 2px solid $color-primary;
+    border-radius: 5px;
+}
+input {
+    width: 100%;
+    padding: 10px 18px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.btn-pass {
+    width: 100%;
+    background-color: $color-primary;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-pass:hover {
+    background-color: $color-primary-hover;
+}
+a.forgotpass {
+    justify-content: end;
+    align-items: flex-end;
 }
