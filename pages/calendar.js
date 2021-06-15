@@ -18,7 +18,7 @@ export const Calendar = () => {
                             </div>
                         </div>
                         <div className="row d-flex justify-content-around">
-                            <div className="col-md-7 ">
+                            <div className="col-md-7">
                                 <Scheduler />
                             </div>
 

@@ -1,20 +1,5 @@
-a {
-    -webkit-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    transition: 0.3s all ease;
-}
-a,
-a:hover {
-    text-decoration: none !important;
-}
 
-.content {
-    padding: 7rem 0;
-}
 
-h2 {
-    font-size: 20px;
-}
 
 .form-control:active,
 .form-control:focus {
@@ -234,7 +219,4 @@ input {
 a.forgotpass {
     justify-content: end;
     align-items: flex-end;
-}
-Scheduler {
-    border-radius: 5px;
 }
