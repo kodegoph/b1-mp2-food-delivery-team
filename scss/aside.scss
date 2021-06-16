@@ -1,0 +1,24 @@
+@import "variables";
+aside{
+    background-color: #1f1d2b;
+    width: 104px;
+    z-index: 99;
+    a{
+        text-decoration: none;
+        color: $color-primary;
+        p{
+            font-size: 14px;
+        }
+    }
+    a:hover{
+        color: $color-primary-hover;
+    }
+}
+.justify-self-end{
+    justify-self: end;
+}
+@media (min-width: 768px){
+    aside{
+        width: 200px;
+    }
+}
