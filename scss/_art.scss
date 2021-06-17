@@ -5,13 +5,11 @@
 }
 #search-and-profile{
   .x-icon{
-    top: 15px;
+    top: 25px;
     right: 15px;
     color: $color-primary;
   }
   .x-icon:hover{
-    top: 15px;
-    right: 15px;
     color: $color-primary-hover;
   }
   .search-order{
@@ -27,11 +25,34 @@
   }
   .mapboxgl-map{
     border-radius: 10px;
-    height: 877px !important;
   }
   .bg-badge-secondary{
     background-color: $color-primary;
   }
+  .paginationBttns{
+    width: 50%;
+    padding-top: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    a{
+      padding: 10px;
+      margin: 8px;
+      border-radius: 5px;
+      border: 1px solid $color-primary;
+      color: white;
+      cursor: pointer;
+    }
+    a:hover{
+      color: $color-primary-hover;
+      background-color: white;
+    }
+  }
+  .paginationActive a{
+    color: $color-primary-hover;
+      background-color: white;
+  }
+
 }
 #profile{
   .profile-description{

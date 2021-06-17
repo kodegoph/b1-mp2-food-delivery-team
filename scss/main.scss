@@ -67,6 +67,10 @@
         margin-left: 200px
     }
 }
+.overflow-y-scroll{
+    overflow: hidden;
+    overflow-y: scroll;
+}
 @import "aside";
 @import "footer";
 @import "art";

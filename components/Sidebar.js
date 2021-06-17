@@ -1,12 +1,14 @@
 import Link from "next/link";
+import Image from "next/Image";
 
+import Picture from "../public/assets/images/k-shuttle.svg";
 const Sidebar = () => {
   return (
     <aside
       className="position-fixed side-menu vh-100"
       data-bs-scroll="true"
       data-bs-backdrop="false"
-      tabindex="-1"
+      tabIndex="-1"
       id="offcanvasScrolling"
       aria-labelledby="offcanvasScrollingLabel"
     >
@@ -15,7 +17,14 @@ const Sidebar = () => {
           <div className="col pt-3 d-flex align-items-center justify-content-between h-100 flex-column">
             <div className="text-center">
               <a href="">
-                <i className="bx bx-food-tag bx-lg mb-5"></i>
+                <Image
+                  src={Picture}
+                  alt="logo"
+                  className="img-logo"
+                  width={24}
+                  height={19}
+                  layout={"responsive"}
+                />
               </a>
               <div className="dash-icons d-flex align-items-center flex-column">
                 <Link href="/">
