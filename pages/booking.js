@@ -2,11 +2,8 @@ import * as React from "react";
 import ReactMapGL from "react-map-gl";
 import { useState } from "react";
 import JSONDATA from "../public/data/MOCK_DATA.json";
-<<<<<<< HEAD
-=======
 import axios from "axios";
 import ReactPaginate from "react-paginate";
->>>>>>> f0b966a0061297398d50079a8487d3a1f8be8ed8
 
 export const Booking = () => {
   const [viewport, setViewport] = React.useState({
@@ -15,10 +12,6 @@ export const Booking = () => {
     zoom: 8,
   });
   const [searchTerm, setSearchTerm] = useState("");
-<<<<<<< HEAD
-  return (
-    <main className="me-main p-4 h-100 bg-color font-primary">
-=======
   let [users, setUsers] = useState(
     JSONDATA.filter((val) => {
       if (searchTerm == "" && val.is_pending == true) {
@@ -75,7 +68,6 @@ export const Booking = () => {
   };
   return (
     <main className="me-main p-4 h-100 bg-color font-primary vh-100 overflow-y-scroll">
->>>>>>> f0b966a0061297398d50079a8487d3a1f8be8ed8
       <section id="search-and-profile" className="mb-4">
         <div className="container-fluid">
           <div className="row">
@@ -107,34 +99,6 @@ export const Booking = () => {
                 <div className="col-12 col-md-6 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-between">
                   <div className="food-header d-flex">
                     <h2 className="me-3 mb-0">Food Delivery</h2>
-<<<<<<< HEAD
-                    {JSONDATA.filter((val) => {
-                      if (searchTerm == "") {
-                        return (val = "");
-                      } else if (
-                        val.restaurant_name
-                          .toLowerCase()
-                          .includes(searchTerm.toLowerCase()) &&
-                        val.is_pending == true
-                      ) {
-                        return val;
-                      }
-                    }).map((val, key) => {
-                      return (
-                        <p
-                          id="search-result"
-                          className="mb-0 align-self-end"
-                          key={key}
-                        >
-                          results
-                        </p>
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-                  <a id="page-left" href="">
-=======
                     <p id="search-result" className="mb-0 align-self-end">
                       results
                     </p>
@@ -142,60 +106,16 @@ export const Booking = () => {
                 </div>
                 <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
                   {/* <a id="page-left" href="">
->>>>>>> f0b966a0061297398d50079a8487d3a1f8be8ed8
                     <i className="bx bxs-chevron-left bx-md"></i>
                   </a>
                   <a id="page-right" href="">
                     <i className="bx bxs-chevron-right bx-md"></i>
-<<<<<<< HEAD
-                  </a>
-                </div>
-              </div>
-              {JSONDATA.filter((val) => {
-                if (searchTerm == "") {
-                  return (val = "");
-                } else if (
-                  val.restaurant_name
-                    .toLowerCase()
-                    .includes(searchTerm.toLowerCase()) &&
-                  val.is_pending == true
-                ) {
-                  return val;
-                }
-              }).map((val, key) => {
-                return (
-                  <div
-                    className="col-12 order-card bg-card-booking mb-3"
-                    key={key}
-                  >
-                    <div className="row">
-                      <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
-                        <img src={val.img} alt={val.restaurant_name} />
-                      </div>
-                      <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
-                        <div className="badges">
-                          <span className="badge bg-badge-secondary">Pro</span>
-                        </div>
-                        <h4>{val.restaurant_name}</h4>
-                        <h6>
-                          Order Number: <span id="order-num">{val.id}</span>
-                        </h6>
-                        <button className="btn bg-secondary">Complete</button>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="col-12 col-md-6 col-xl-4">
-=======
                   </a> */}
                 </div>
               </div>
               {displayUsers}
             </div>
             <div className="col-12 col-md-6 col-xl-4 py-2">
->>>>>>> f0b966a0061297398d50079a8487d3a1f8be8ed8
               <ReactMapGL
                 mapStyle="mapbox://styles/mapbox/streets-v11"
                 mapboxApiAccessToken={process.env.MAPBOX_KEY}
@@ -206,8 +126,6 @@ export const Booking = () => {
               />
             </div>
           </div>
-<<<<<<< HEAD
-=======
           <div className="row">
             <div className="col-12 d-flex justify-content-center mt-3">
               <ReactPaginate
@@ -223,7 +141,6 @@ export const Booking = () => {
               />
             </div>
           </div>
->>>>>>> f0b966a0061297398d50079a8487d3a1f8be8ed8
         </div>
       </section>
     </main>

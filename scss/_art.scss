@@ -5,25 +5,13 @@
   border-radius: 10px;
   padding: 1.5rem;
 }
-<<<<<<< HEAD
 #search-and-profile {
   .x-icon {
-    top: 15px;
-    right: 15px;
-    color: $color-primary;
-  }
-  .x-icon:hover {
-    top: 15px;
-    right: 15px;
-=======
-#search-and-profile{
-  .x-icon{
     top: 25px;
     right: 15px;
     color: $color-primary;
   }
-  .x-icon:hover{
->>>>>>> f0b966a0061297398d50079a8487d3a1f8be8ed8
+  .x-icon:hover {
     color: $color-primary-hover;
   }
   .search-order {
@@ -39,23 +27,17 @@
   }
   .mapboxgl-map {
     border-radius: 10px;
-<<<<<<< HEAD
-    height: 877px !important;
-=======
->>>>>>> f0b966a0061297398d50079a8487d3a1f8be8ed8
   }
   .bg-badge-secondary {
     background-color: $color-primary;
   }
-<<<<<<< HEAD
-=======
-  .paginationBttns{
+  .paginationBttns {
     width: 50%;
     padding-top: 10px;
     list-style: none;
     display: flex;
     justify-content: center;
-    a{
+    a {
       padding: 10px;
       margin: 8px;
       border-radius: 5px;
@@ -63,17 +45,15 @@
       color: white;
       cursor: pointer;
     }
-    a:hover{
+    a:hover {
       color: $color-primary-hover;
       background-color: white;
     }
   }
-  .paginationActive a{
+  .paginationActive a {
     color: $color-primary-hover;
-      background-color: white;
+    background-color: white;
   }
-
->>>>>>> f0b966a0061297398d50079a8487d3a1f8be8ed8
 }
 #profile {
   .profile-description {

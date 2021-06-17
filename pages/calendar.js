@@ -1,4 +1,6 @@
 import Scheduler from "../components/Scheduler";
+import App from "../components/App"
+
 export const Calendar = () => {
   return (
     <main className="me-main p-4 h-100 bg-color font-primary">
