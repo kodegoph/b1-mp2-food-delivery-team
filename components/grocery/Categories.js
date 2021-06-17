@@ -2,8 +2,8 @@ import Modals from '../cards/Modals'
 
 const Categories = () => {
     return (
-      <div className="card bg-white text-dark p-md-3">
-      <div className="card-body">Select Movie Categorie</div>
+      <div className="card bg-white text-dark p-3">
+      <div className="card-body"><h4>Select Movie Categories</h4></div>
       <div className="d-flex justify-content-between px-3">
         <p>Select your favourite food menu</p>
         <Modals/>
