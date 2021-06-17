@@ -16,7 +16,7 @@ const Home = () => {
         <Head>
             <title>Dashboard | Grocery</title>
         </Head>
-       <main className="me-main p-4 h-100 bg-color font-primary text-dark">
+       <main className="me-main p-2 h-100 bg-color font-primary text-dark">
        <div className="container-fluid">
           <HeaderDash/>
         <div className="row row-fluid gx-4">
