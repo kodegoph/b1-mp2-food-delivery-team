@@ -1,8 +1,11 @@
-/*!
+/**
+ * /*!
  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ *
+ * @format
  */
 
 // scss-docs-start import-stack
@@ -53,27 +56,24 @@
 
 @import "~boxicons";
 // scss-boxicons
-.me-main{
-    margin-left: 104px
+.me-main {
+  margin-left: 104px;
 }
-.bg-color{
-    background-color: #242230;
+.bg-color {
+  background-color: #242230;
 }
-.font-primary{
-    color: white;
+.font-primary {
+  color: white;
 }
 @media (min-width: 768px) {
-    .me-main{
-        margin-left: 200px
-    }
+  .me-main {
+    margin-left: 200px;
+  }
 }
-<<<<<<< HEAD
-=======
-.overflow-y-scroll{
-    overflow: hidden;
-    overflow-y: scroll;
+.overflow-y-scroll {
+  overflow: hidden;
+  overflow-y: scroll;
 }
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
 @import "aside";
 @import "footer";
 @import "art";

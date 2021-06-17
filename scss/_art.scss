@@ -1,107 +1,72 @@
-.bg-card-booking{
+/** @format */
+
+.bg-card-booking {
   background-color: #353340;
   border-radius: 10px;
   padding: 1.5rem;
 }
-#search-and-profile{
-  .x-icon{
-<<<<<<< HEAD
+#search-and-profile {
+  .x-icon {
     top: 15px;
-=======
-    top: 25px;
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
     right: 15px;
     color: $color-primary;
   }
-  .x-icon:hover{
-<<<<<<< HEAD
+  .x-icon:hover {
     top: 15px;
     right: 15px;
-=======
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
     color: $color-primary-hover;
   }
-  .search-order{
+  .search-order {
     width: 100%;
     padding: 1rem;
     border-radius: 10px;
   }
-  .search-order:hover{
+  .search-order:hover {
     border: 1px solid $color-primary;
   }
-  .search-order:active{
+  .search-order:active {
     border: 1px solid $color-primary-hover;
   }
-  .mapboxgl-map{
+  .mapboxgl-map {
     border-radius: 10px;
-<<<<<<< HEAD
     height: 877px !important;
-=======
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
   }
-  .bg-badge-secondary{
+  .bg-badge-secondary {
     background-color: $color-primary;
   }
-<<<<<<< HEAD
-=======
-  .paginationBttns{
-    width: 50%;
-    padding-top: 10px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    a{
-      padding: 10px;
-      margin: 8px;
-      border-radius: 5px;
-      border: 1px solid $color-primary;
-      color: white;
-      cursor: pointer;
-    }
-    a:hover{
-      color: $color-primary-hover;
-      background-color: white;
-    }
-  }
-  .paginationActive a{
-    color: $color-primary-hover;
-      background-color: white;
-  }
-
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
 }
-#profile{
-  .profile-description{
+#profile {
+  .profile-description {
     max-width: 400px;
   }
-  .profile-label{
+  .profile-label {
     font-size: 14px;
     line-height: 1.43;
     letter-spacing: 0.25px;
     font-weight: 400;
   }
-  .picture-div{
-    .img-profile{
+  .picture-div {
+    .img-profile {
       width: 100px;
       height: 100px;
       border-radius: 20px;
     }
-    input{
+    input {
       font-size: 13px;
     }
   }
-  .text-input{
+  .text-input {
     padding: 10px 16px;
     border-radius: 10px;
     max-width: 400px;
   }
-  .divider-hr{
+  .divider-hr {
     border: none;
     height: 1px;
     margin: 0;
     flex-shrink: 0;
     background-color: rgba(255, 255, 255, 255);
-    color: #DFE3ED;
+    color: #dfe3ed;
     margin-top: 24px;
   }
 }

@@ -1,6 +1,5 @@
 import "../scss/main.scss";
 import Layout from "../components/layout/Layout";
-<<<<<<< HEAD
 import React from 'react'
 import App from 'next/app'
 import Signup from './auth/signup'
@@ -32,19 +31,11 @@ class MyApp extends App {
     }
      return (
     
-=======
-
-function MyApp({ Component, pageProps }) {
-  return (
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
     <Layout>
       <Component {...pageProps} />
     </Layout>
   );
-<<<<<<< HEAD
   }
-=======
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
 }
 
 export default MyApp;
