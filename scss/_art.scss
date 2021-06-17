@@ -5,20 +5,13 @@
 }
 #search-and-profile{
   .x-icon{
-<<<<<<< HEAD
     top: 15px;
-=======
-    top: 25px;
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
     right: 15px;
     color: $color-primary;
   }
   .x-icon:hover{
-<<<<<<< HEAD
     top: 15px;
     right: 15px;
-=======
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
     color: $color-primary-hover;
   }
   .search-order{
@@ -34,41 +27,11 @@
   }
   .mapboxgl-map{
     border-radius: 10px;
-<<<<<<< HEAD
     height: 877px !important;
-=======
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
   }
   .bg-badge-secondary{
     background-color: $color-primary;
   }
-<<<<<<< HEAD
-=======
-  .paginationBttns{
-    width: 50%;
-    padding-top: 10px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    a{
-      padding: 10px;
-      margin: 8px;
-      border-radius: 5px;
-      border: 1px solid $color-primary;
-      color: white;
-      cursor: pointer;
-    }
-    a:hover{
-      color: $color-primary-hover;
-      background-color: white;
-    }
-  }
-  .paginationActive a{
-    color: $color-primary-hover;
-      background-color: white;
-  }
-
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
 }
 #profile{
   .profile-description{

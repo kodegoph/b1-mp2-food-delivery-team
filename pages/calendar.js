@@ -19,11 +19,7 @@ export const Calendar = () => {
                         </div>
                         <div className="row d-flex justify-content-around">
                             <div className="col-md-7">
-<<<<<<< HEAD
                                 <Scheduler />
-=======
-                                <App />
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
                             </div>
 
                             <div className="col-md-4">
@@ -57,25 +53,15 @@ export const Calendar = () => {
                                     <li>7</li>
                                     <li>8</li>
                                     <li>9</li>
-<<<<<<< HEAD
                                     <li>
                                         <span className="active">10</span>
                                     </li>
-=======
-                                    <li>10</li>
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
                                     <li>12</li>
                                     <li>13</li>
                                     <li>14</li>
                                     <li>15</li>
                                     <li>16</li>
-<<<<<<< HEAD
                                     <li>17</li>
-=======
-                                    <li>
-                                        <span className="active">17</span>
-                                    </li>
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
                                     <li>18</li>
                                     <li>19</li>
                                     <li>20</li>

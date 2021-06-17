@@ -2,11 +2,6 @@ import * as React from "react";
 import ReactMapGL from "react-map-gl";
 import { useState } from "react";
 import JSONDATA from "../public/data/MOCK_DATA.json";
-<<<<<<< HEAD
-=======
-import axios from "axios";
-import ReactPaginate from "react-paginate";
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
 
 export const Booking = () => {
   const [viewport, setViewport] = React.useState({
@@ -15,67 +10,8 @@ export const Booking = () => {
     zoom: 8,
   });
   const [searchTerm, setSearchTerm] = useState("");
-<<<<<<< HEAD
   return (
     <main className="me-main p-4 h-100 bg-color font-primary">
-=======
-  let [users, setUsers] = useState(
-    JSONDATA.filter((val) => {
-      if (searchTerm == "" && val.is_pending == true) {
-        return val;
-      } else if (
-        val.restaurant_name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-        val.is_pending == true
-      ) {
-        return val;
-      }
-    }).sort((a, b) => (a.color > b.color ? 1 : -1))
-  );
-  const [pageNumber, setPageNumber] = useState(0);
-
-  const usersPerPage = 4;
-  const pagesVisited = pageNumber * usersPerPage;
-  const displayUsers = users
-    .slice(pagesVisited, pagesVisited + usersPerPage)
-    .filter((user) => {
-      if (searchTerm == "") {
-        return user;
-      } else if (
-        user.restaurant_name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-        user.is_pending == true
-      ) {
-        return user;
-      }
-    })
-    .map((user, key) => {
-      return (
-        <div className="col-12 order-card bg-card-booking mb-3" key={key}>
-          <div className="row">
-            <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
-              <img src={user.img} alt={user.restaurant_name} />
-            </div>
-            <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
-              <div className="badges">
-                <span className="badge bg-badge-secondary">Pro</span>
-              </div>
-              <h4>{user.restaurant_name}</h4>
-              <h6>
-                Order Number: <span id="order-num">{user.id}</span>
-              </h6>
-              <button className="btn bg-secondary">Complete</button>
-            </div>
-          </div>
-        </div>
-      );
-    })
-    .sort((a, b) => (a.color > b.color ? 1 : -1));
-  const pageCount = Math.ceil(users.length / usersPerPage);
-  const changePage = ({ selected }) => {
-    setPageNumber(selected);
-  };
-  return (
-    <main className="me-main p-4 h-100 bg-color font-primary vh-100 overflow-y-scroll">
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
       <section id="search-and-profile" className="mb-4">
         <div className="container-fluid">
           <div className="row">
@@ -107,7 +43,6 @@ export const Booking = () => {
                 <div className="col-12 col-md-6 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-between">
                   <div className="food-header d-flex">
                     <h2 className="me-3 mb-0">Food Delivery</h2>
-<<<<<<< HEAD
                     {JSONDATA.filter((val) => {
                       if (searchTerm == "") {
                         return (val = "");
@@ -134,20 +69,10 @@ export const Booking = () => {
                 </div>
                 <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
                   <a id="page-left" href="">
-=======
-                    <p id="search-result" className="mb-0 align-self-end">
-                      results
-                    </p>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-                  {/* <a id="page-left" href="">
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
                     <i className="bx bxs-chevron-left bx-md"></i>
                   </a>
                   <a id="page-right" href="">
                     <i className="bx bxs-chevron-right bx-md"></i>
-<<<<<<< HEAD
                   </a>
                 </div>
               </div>
@@ -188,14 +113,6 @@ export const Booking = () => {
               })}
             </div>
             <div className="col-12 col-md-6 col-xl-4">
-=======
-                  </a> */}
-                </div>
-              </div>
-              {displayUsers}
-            </div>
-            <div className="col-12 col-md-6 col-xl-4 py-2">
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
               <ReactMapGL
                 mapStyle="mapbox://styles/mapbox/streets-v11"
                 mapboxApiAccessToken={process.env.MAPBOX_KEY}
@@ -206,24 +123,6 @@ export const Booking = () => {
               />
             </div>
           </div>
-<<<<<<< HEAD
-=======
-          <div className="row">
-            <div className="col-12 d-flex justify-content-center mt-3">
-              <ReactPaginate
-                previousLabel={"Previous"}
-                nextLabel={"Next"}
-                pageCount={pageCount}
-                onPageChange={changePage}
-                containerClassName={"paginationBttns"}
-                previousLinkClassName={"previousBttns"}
-                nextLinkClassName={"nextBttns"}
-                disabledClassName={"paginationDisabled"}
-                activeClassName={"paginationActive"}
-              />
-            </div>
-          </div>
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
         </div>
       </section>
     </main>

@@ -1,11 +1,4 @@
 import Link from "next/link";
-<<<<<<< HEAD
-
-=======
-import Image from "next/Image";
-
-import Picture from "../public/assets/images/k-shuttle.svg";
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
 const Sidebar = () => {
   return (
     <aside
@@ -21,18 +14,7 @@ const Sidebar = () => {
           <div className="col pt-3 d-flex align-items-center justify-content-between h-100 flex-column">
             <div className="text-center">
               <a href="">
-<<<<<<< HEAD
                 <i className="bx bx-food-tag bx-lg mb-5"></i>
-=======
-                <Image
-                  src={Picture}
-                  alt="logo"
-                  className="img-logo"
-                  width={24}
-                  height={19}
-                  layout={"responsive"}
-                />
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
               </a>
               <div className="dash-icons d-flex align-items-center flex-column">
                 <Link href="/">
@@ -65,11 +47,7 @@ const Sidebar = () => {
                 href=""
               >
                 <p className="d-none d-md-block my-auto me-2">Welcome, User</p>
-<<<<<<< HEAD
                 <i className="bx bxs-user-circle bx-md"></i>
-=======
-                <i class="bx bxs-user-circle bx-md"></i>
->>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
               </a>
             </Link>
           </div>
