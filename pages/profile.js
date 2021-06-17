@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import Image from 'next/image'
 
+=======
+>>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
 const profile = () => {
   return (
     <main className="me-main p-4 vh-100 bg-color font-primary">
@@ -16,7 +19,11 @@ const profile = () => {
             <div className="col-12 col-md-6">
               <p className="profile-label mb-3">Profile Picture</p>
               <div className="picture-div d-flex align-items-center mb-3">
+<<<<<<< HEAD
                 <Image
+=======
+                <img
+>>>>>>> a0ec9602f31bfad9049ab4befbf2daece3f427d8
                   src="https://picsum.photos/id/237/120/144"
                   alt="profile-picture"
                   id="profile-pic"
