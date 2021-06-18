@@ -28,34 +28,23 @@ const Home = () => {
                   </div>
                   <BestSelling />
 
-                  <div className="row row-fluid gx-5">
-                    <div className="col-md-6 mb-3">
-                      <h6 className="text-decoration-none">
-                        <a href="">Report Transacion</a>
-                      </h6>
-                    </div>
-                    <div className="col-md-6 mb-3">
-                      <h6 className="text-decoration-none">
-                        <a href="">Most Spend</a>
-                      </h6>
-                    </div>
-                  </div>
+                 
                 </div>
                 <div className="row gx-3">
                   <div className="col-md-7 mb-3">
                     <OrderHistory />
                   </div>
                   <div className="col-md-5 mb-3">
-                    <div className="row row-fluid gx-5">
+                    <div className="row row-fluid gx-5 ">
                       <div className="col-md-12 mb-3">
                         <LineChart />
                       </div>
                     </div>
-                    <div className="row row-fluid gx-3">
-                      <div className="col-md-6 mb-3">
+                    <div className="row row-fluid g-4 pt-2">
+                      <div className="col-md-12 col-lg-6 mb-3  col-xs-12">
                         <GrocerySales />
                       </div>
-                      <div className="col-md-6 mb-3">
+                      <div className="col-md-12 col-lg-6 mb-3  col-xs-12">
                         <TicketSales />
                       </div>
                     </div>

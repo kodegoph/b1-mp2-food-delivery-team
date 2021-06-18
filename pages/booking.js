@@ -135,7 +135,7 @@ export const Booking = () => {
       <section id="search-and-profile" className="mb-4">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-12 col-md-6 col-xl-8">
+            <div className="col-12 col-md-6 col-xl-8 py-2">
               <div className="search-input d-flex w-100 mb-3 position-relative">
                 <a href="" type="reset" className="position-absolute x-icon">
                   <svg
@@ -181,7 +181,7 @@ export const Booking = () => {
             </div>
             <div className="col-12 col-md-6 col-xl-4 py-2">
               <ReactMapGL
-                mapStyle="mapbox://styles/mapbox/streets-v11"
+                mapStyle="mapbox://styles/unsiga25/ckor0gczt3du817p6q8gb6hf5"
                 mapboxApiAccessToken={process.env.MAPBOX_KEY}
                 {...viewport}
                 width="100%"

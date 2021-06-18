@@ -1,6 +1,8 @@
 module.exports = {
+  images: {
+    domains: [`mykoreankitchen.com`],
+  },
   env: {
-    MAPBOX_KEY:
-      "pk.eyJ1IjoidW5zaWdhMjUiLCJhIjoiY2tvcjBkanVxMTAxMDJzcGN3N3pkeTdkdiJ9.YkXJv6TNKV4L_Ebc163L1g",
+    MAPBOX_KEY: "pk.eyJ1IjoidW5zaWdhMjUiLCJhIjoiY2txMXVlYWFiMGlqbTJ1cDg0ajN3aWJpdCJ9._xUtbcMizegKO_jKubM6dA",
   },
 };

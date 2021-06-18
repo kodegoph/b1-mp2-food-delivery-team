@@ -10,7 +10,7 @@ const GrocerySales = () => {
             <h6 className="m-2">Most Branch Sales</h6>
           </div>
         </div>
-        <p className="m-3 pt-3">Caloocan Branch</p>
+        <p className="m-2 ">Caloocan Branch</p>
         <div className="d-flex justify-content-between align-content-center">
           <div className="progress" style={{width : '100px', height : '5px'}}>
             <div style={{width: '50%'}} className="progress-bar"></div>

@@ -29,7 +29,7 @@ const App = () => {
              </div>
             </div>
             <div className="col-md-6 col-12 col-xl-3">
-            <div className="card m-3"  style={{width : '18rem'}}>
+            <div className="card m-3 m-3"  style={{width : '18rem'}}>
             <img src="http://lorempixel.com/640/480/food" alt="placeholder image"/>
               <div className="card-body">
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
