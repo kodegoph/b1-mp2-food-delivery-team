@@ -1,51 +1,101 @@
-import  Link from 'next/link'
+import Link from "next/link";
+import App from "next/app";
 
+class Login extends App {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.state = {
+            username: "",
+            password: "",
+            error: false,
+        };
+    }
+    componentDidMount() {
+        localStorage.removeItem("_gLogged");
+    }
+    handleInputChange(event) {
+        this.setState({error: false});
+        this.setState({[event.target.name]: event.target.value});
+    }
+    handleSubmit(event) {
+        event.preventDefault();
+        const {username, password} = this.state;
+        const {logIn} = this.props;
+        if (username === "admin" && password === "admin123") {
+            logIn();
+        } else {
+            this.setState({error: true});
+        }
+    }
 
-const Login = () => {
-    return (
-        <>
-      <div className="container-fluid">
-      <div className="row no-gutter">
-          <div className="col-md-6 d-none d-md-flex bg-image"></div>
-  
-  
-          <div className="col-md-6 bg-light">
-              <div className="login d-flex align-items-center py-5">
-  
-                  <div className="container">
-                      <div className="row">
-                          <div className="col-lg-10 col-xl-7 mx-auto">
-                              <h3 className="display-4">Split page!</h3>
-                              <p className="text-muted mb-4">Create a login split page using Bootstrap 4.</p>
-                              <form>
-                                  <div className="form-group mb-3">
-                                      <input id="inputEmail" type="email" placeholder="Email address" required="" autofocus="" className="form-control rounded-pill border-0 shadow-sm px-4"/>
-                                  </div>
-                                  <div className="form-group mb-3">
-                                      <input id="inputPassword" type="password" placeholder="Password" required="" className="form-control rounded-pill border-0 shadow-sm px-4 text-primary"/>
-                                  </div>
-                                  <div className="custom-control custom-checkbox mb-3">
-                                      <input id="customCheck1" type="checkbox" checked className="custom-control-input"/>
-                                      <label for="customCheck1" className="custom-control-label">Remember password</label>
-                                  </div>
-                                  <button type="submit" className="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
-                                  <div className="text-center d-flex justify-content-between mt-4"><p>Snippet by <a href="https://bootstrapious.com/snippets" className="font-italic text-muted"> 
-                                          <u>Boostrapious</u></a></p></div>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-  
-              </div>
-          </div>
-  
-      </div>
-  </div>
-      
-      </>
- 
-    );
-};
-  
-export default Login
-  
+    render() {
+        const {username, password, error} = this.state;
+        return (
+            <div className="container">
+                <div className="row no-gutter">
+                    <div className="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+                    <div className="col-md-8 col-lg-6">
+                        <div className="login d-flex align-items-center py-5">
+                            <div className="container border-3 rounded">
+                                <div className="row">
+                                    <div className="col-md-9 col-lg-8 mx-auto">
+                                        <h3 className="login-heading mb-4">
+                                            Welcome back!
+                                        </h3>
+                                        {error && <div>Bad credentials</div>}
+                                        <form onSubmit={this.handleSubmit}>
+                                            <div className="form-label-group">
+                                                <input
+                                                    type="Name"
+                                                    name="username"
+                                                    className="form-control"
+                                                    placeholder="Username"
+                                                    required
+                                                    autofocus
+                                                    value={username}
+                                                    onChange={
+                                                        this.handleInputChange
+                                                    }
+                                                />
+                                                <label htmlFor="inputName">
+                                                    Username
+                                                </label>
+                                            </div>
+
+                                            <div className="form-label-group">
+                                                <input
+                                                    type="password"
+                                                    name="password"
+                                                    className="form-control"
+                                                    placeholder="Password"
+                                                    required
+                                                    value={password}
+                                                    onChange={
+                                                        this.handleInputChange
+                                                    }
+                                                />
+                                                <label htmlFor="inputPassword">
+                                                    Password
+                                                </label>
+                                            </div>
+
+                                            <button
+                                                className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                                                type="submit">
+                                                Sign in
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+export default Login;
