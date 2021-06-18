@@ -3,23 +3,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const TicketSales = () => {
     return (
-        <div className="card w-100% p-3">
-        <h6>Most Food Delivey Buyers</h6>
+        <div className="card w-100% p-3 text-center">
+          <div className="align-content-end">
+        <h5>Food Delivey Buyers</h5>
         <div className="d-flex">
-          <i className="bi bi-record green-text"></i>
-          <div>
-            <p>Parent's</p>
-            <p>78%</p>
+          
+          <div className="">
+           <div className="pt-4">
+            <h6>Parent's</h6>
+            <h6>78%</h6>
+            </div>
+          
+         
+          <div className="pt-4">
+            <h6>Teenagers</h6>
+            <h6>48 %</h6>
+          </div>
           </div>
         </div>
-        <div className="d-flex">
-          <i className="bi bi-record green-text"></i>
-          <div>
-            <p>Teenagers</p>
-            <p>48 %</p>
-          </div>
         </div>
-      </div>
+        </div>
+ 
     );
   };
   

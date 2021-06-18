@@ -1,14 +1,14 @@
 /** @format */
 
 .bg-card-booking {
-  background-color: #353340;
+  background-color: #fff;
   border-radius: 10px;
   padding: 1.5rem;
 }
 .react-responsive-modal-modal {
   padding: 3.2rem !important;
-  background-color: #353340 !important;
-  color: white !important;
+  background-color: #fff !important;
+  color: #333 !important;
 }
 #search-and-profile {
   .x-icon {
@@ -30,11 +30,36 @@
   .search-order:active {
     border: 1px solid $color-primary-hover;
   }
+  .order-card {
+    a {
+      color: #333;
+    }
+  }
+  .map-col {
+    height: 480px;
+    a {
+      color: #333;
+    }
+  }
+  .driver-img {
+    width: 100%;
+    height: 100%;
+    max-width: 68px;
+    max-height: 68px;
+    border-radius: 50%;
+  }
+  .bike {
+    font-size: 12px;
+    font-weight: 300;
+  }
   .mapboxgl-map {
     border-radius: 10px;
   }
   .bg-badge-secondary {
     background-color: $color-primary;
+  }
+  .bx-2x {
+    font-size: 24px;
   }
   .paginationBttns {
     width: 50%;
@@ -47,7 +72,7 @@
       margin: 8px;
       border-radius: 5px;
       border: 1px solid $color-primary;
-      color: white;
+      color: #333;
       cursor: pointer;
     }
     a:hover {
@@ -58,6 +83,19 @@
   .paginationActive a {
     color: $color-primary-hover;
     background-color: white;
+  }
+  .progress-bar-vertical {
+    width: 8px;
+    min-height: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: #d0cece;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
   }
 }
 #profile {

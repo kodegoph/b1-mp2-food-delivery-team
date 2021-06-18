@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import ReactMapGL from "react-map-gl";
-import { useState, useEf } from "react";
+import { useState, useEffect } from "react";
 import JSONDATA from "../public/data/MOCK_DATA.json";
 import axios from "axios";
 import { Modal } from "react-responsive-modal";
@@ -50,7 +50,7 @@ export const Booking = () => {
     })
     .map((user, key) => {
       return (
-        <div className="col-12 order-card bg-card-booking mb-3" key={key}>
+        <div className="col-12 order-card bg-card-booking mt-3 p-3" key={key}>
           <a
             className="cursor-pointer text-decoration-none"
             onClick={onOpenModal}
@@ -59,69 +59,78 @@ export const Booking = () => {
               <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
                 <img src={user.img} alt={user.restaurant_name} />
               </div>
-              <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
+              <div className="col-12 col-lg-4 col-xl-5 d-flex flex-column align-items-center align-items-lg-start">
                 <div className="badges">
                   <span className="badge bg-badge-secondary">Pro</span>
                 </div>
+                <h4>{user.city}</h4>
+                <h6>
+                  Street Address:{" "}
+                  <span id="order-num">{user.street_address}</span>
+                </h6>
+              </div>
+              <div className="col-12 col-lg-3 col-xl-4 d-flex flex-column align-items-center align-items-lg-start justify-content-end">
                 <h4>{user.restaurant_name}</h4>
                 <h6>
                   Order Number: <span id="order-num">{user.id}</span>
                 </h6>
-                <button className="btn bg-secondary">Complete</button>
               </div>
             </div>
           </a>
           <Modal open={open} onClose={onCloseModal} center>
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-md-6">
-            <h3>Items</h3>
-          </div>
-          <div className="col-12 col-md-2 justify-content-center d-none d-md-flex">
-            <h3>Qty</h3>
-          </div>
-          <div className="col-12 col-md-2 justify-content-center d-none d-md-flex">
-            <h3>Price</h3>
-          </div>
-          <div className="col-12 col-md-2 justify-content-center d-none d-md-flex">
-            <h3>Total Price</h3>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12 col-md-6 justify-content-center justify-content-md-start d-flex">
-            <div className="row">
-              <div className="col-12 col-md-6">
-                <img
-                  src={user.img}
-                  alt={user.restaurant_name}
-                  className="w-100 h-100 me-3"
-                />
+            <div className="container">
+              <div className="row">
+                <div className="col-12 col-md-6">
+                  <h3>Items</h3>
+                </div>
+                <div className="col-12 col-md-2 justify-content-center d-none d-md-flex">
+                  <h3>Qty</h3>
+                </div>
+                <div className="col-12 col-md-2 justify-content-center d-none d-md-flex">
+                  <h3>Price</h3>
+                </div>
+                <div className="col-12 col-md-2 justify-content-center d-none d-md-flex">
+                  <h3>Total Price</h3>
+                </div>
               </div>
-              <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-start flex-column">
-                <h4 className="mt-2 mt-md-0">{user.food[0].food_type}</h4>
-                <h3>{user.food[0].food_name}</h3>
-                <p className="d-md-none">Quantity: {user.food[0].quantity}</p>
-                <p className="d-md-none">Price: ${user.food[0].price}</p>
-                <p className="d-md-none">
-                  Total Price: ${user.food[0].quantity * user.food[0].price}
-                </p>
+              <div className="row">
+                <div className="col-12 col-md-6 justify-content-center justify-content-md-start d-flex">
+                  <div className="row">
+                    <div className="col-12 col-md-6">
+                      <img
+                        src={user.img}
+                        alt={user.restaurant_name}
+                        className="w-100 h-100 me-3"
+                      />
+                    </div>
+                    <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-start flex-column">
+                      <h4 className="mt-2 mt-md-0">{user.food[0].food_type}</h4>
+                      <h3>{user.food[0].food_name}</h3>
+                      <p className="d-md-none">
+                        Quantity: {user.food[0].quantity}
+                      </p>
+                      <p className="d-md-none">Price: ${user.food[0].price}</p>
+                      <p className="d-md-none">
+                        Total Price: $
+                        {user.food[0].quantity * user.food[0].price}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-12 col-md-2 justify-content-center align-items-center d-flex d-none d-md-block">
+                  <p className="text-center">{user.food[0].quantity}</p>
+                </div>
+                <div className="col-12 col-md-2 justify-content-center align-items-center d-flex d-none d-md-block">
+                  <p className="text-center">${user.food[0].price}</p>
+                </div>
+                <div className="col-12 col-md-2 justify-content-center align-items-center d-flex d-none d-md-block">
+                  <p className="text-center">
+                    ${user.food[0].quantity * user.food[0].price}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-12 col-md-2 justify-content-center align-items-center d-flex d-none d-md-block">
-            <p className="text-center">{user.food[0].quantity}</p>
-          </div>
-          <div className="col-12 col-md-2 justify-content-center align-items-center d-flex d-none d-md-block">
-            <p className="text-center">${user.food[0].price}</p>
-          </div>
-          <div className="col-12 col-md-2 justify-content-center align-items-center d-flex d-none d-md-block">
-            <p className="text-center">
-              ${user.food[0].quantity * user.food[0].price}
-            </p>
-          </div>
-        </div>
-      </div>
-    </Modal>
+          </Modal>
         </div>
       );
     })
@@ -160,7 +169,7 @@ export const Booking = () => {
                 />
               </div>
               <div className="row mb-2">
-                <div className="col-12 col-md-6 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-between">
+                <div className="col-12 mb-3 mb-md-0 d-flex">
                   <div className="food-header d-flex">
                     <h2 className="me-3 mb-0">Food Delivery</h2>
                     <p id="search-result" className="mb-0 align-self-end">
@@ -168,26 +177,63 @@ export const Booking = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-                  {/* <a id="page-left" href="">
-                    <i className="bx bxs-chevron-left bx-md"></i>
-                  </a>
-                  <a id="page-right" href="">
-                    <i className="bx bxs-chevron-right bx-md"></i>
-                  </a> */}
-                </div>
               </div>
               {displayUsers}
             </div>
-            <div className="col-12 col-md-6 col-xl-4 py-2">
-              <ReactMapGL
-                mapStyle="mapbox://styles/unsiga25/ckor0gczt3du817p6q8gb6hf5"
-                mapboxApiAccessToken={process.env.MAPBOX_KEY}
-                {...viewport}
-                width="100%"
-                height="100%"
-                onViewportChange={(viewport) => setViewport(viewport)}
-              />
+            <div className="col-12 col-md-6 col-xl-4 px-3 py-2">
+              <div className="row">
+                <div className="card col-12 p-3 map-col mb-3">
+                  <h3>Track Order:</h3>
+                  <ReactMapGL
+                    mapStyle="mapbox://styles/unsiga25/ckor0gczt3du817p6q8gb6hf5"
+                    mapboxApiAccessToken={process.env.MAPBOX_KEY}
+                    {...viewport}
+                    width="100%"
+                    height="100%"
+                    onViewportChange={(viewport) => setViewport(viewport)}
+                  />
+                  <h4 className="pt-2">Delivery by:</h4>
+                  <div className="d-flex align-items-center justify-content-between">
+                    <div className="d-flex align-items-center">
+                      <img
+                        src="https://picsum.photos/68/68"
+                        className="driver-img me-3"
+                      />
+                      <div className="driver-details">
+                        <p className="bike mb-2">John Doe</p>
+                        <p className="bike mb-0">Yamaha Bike 123</p>
+                      </div>
+                    </div>
+                    <div className="contact-driver d-flex align-items-center flex-column justify-content-center flex-lg-row">
+                      <a href="">
+                        <i class="bx bxs-phone bx-2x me-0"></i>
+                      </a>
+                      <a href="">
+                        <i class="bx bx-current-location bx-2x me-0"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="card col-12">
+                  <h4 className="pt-2">Order Status:</h4>
+                  <div className="progress text-center mb-3">
+                    <div
+                      className="progress-bar"
+                      role="progressbar"
+                      style={{ width: "75%" }}
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      75%
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <h5>On Delivery</h5>
+                    <p>Sat, 23 Jul 2020, 01:24 PM</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="row">

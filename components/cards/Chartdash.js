@@ -4,15 +4,16 @@ import { Line } from 'react-chartjs-2'
 
 const LineChart = () => {
   return (
-    <div className="p-3 text-light">    
+    <div className="p-3 bg-light">    
     <Line 
         data={{
-          labels: ['Sun', 'Mon', 'Tuey', 'Wen', 'Thur', 'Fri', 'Sat'],
+          
+          labels: ['Sun', 'Mon', 'Tue', 'Wen', 'Thur', 'Fri', 'Sat'],
           datasets: [
             {
               color: 'rgba(255, 99, 132, 0.2)',
               lineTension: 0.5,
-              data: [4, 4, 3, 5, 3, 5,  4],
+              data: [300   ,440 ,340, 420, 400, 324,440],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -39,6 +40,7 @@ const LineChart = () => {
         }}
         height={200}
         width={400}
+        backgroundColor="white"
         options={{
           maintainAspectRatio: false,
           scales: {
@@ -51,9 +53,9 @@ const LineChart = () => {
             ],
           },
           legend: {
-            labels: {
+            labels:  {
               fontSize: 30,
-              color: 'white'
+              color: 'black'
             },
           },
         }}

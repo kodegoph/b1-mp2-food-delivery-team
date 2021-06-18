@@ -1,52 +1,39 @@
+/** @format */
+
 import { height, width } from "@material-ui/system";
-import Image from 'next/image';
-
-
+import Image from "next/image";
+import Button from "react-bootstrap/Button";
+import Vector from "/public/Vector_14.svg";
 
 const BestSelling = () => {
-    return (
-      <div className="col col-sm-12 col-md-4 h-auto ">
-      <div className="card bg-color text-dark p-4 p-md-4  mb-3
-      ">
-      <div className="d-flex">
-         
-        
-          <h4 className="text-light">Best Selling</h4>
-      
-        <img src="./images/two dots.svg" alt="" />
-      </div>
-      <h6 className="text-light">Trend 2021</h6>
+  return (
       <div
-        className="card bg-light border-3 rounded"
-        style={{width: '600', height : '200', maxwidth:'120' }}
+        className="row1-card card font-primary p-5 p-md-3  mb-3 
+      "
       >
-        <Image
-             src={`https://mykoreankitchen.com/wp-content/uploads/2020/03/1.-Kimchi-Jjim.jpg`}
-             alt={`my-image`}
-             height={300}
-             width={300}
-             position='fill'
-                />
-      </div>
-      <h5 className="m-3 text-light">Kimchi</h5>
-      <div className="d-flex justify-content-between">
-        <a
-          href="#"
-          className="btn btn-primary btn-sm disabled h-75"
-          role="button"
-          aria-disabled="true"
-          >81 Sell</a
-        >
-        <div className="d-flex">
-          <img className="pb-3"  
-           src="..///../public/assets/images/Vector_14.svg" alt="" />
-          <p className="text-light">29%</p>
+          <h4 className="">Best Selling</h4>
+        <h6 className="mb-3">Trend 2021</h6>
+          <Image
+            src={`https://mykoreankitchen.com/wp-content/uploads/2020/03/1.-Kimchi-Jjim.jpg`}
+            alt={`my-image`}
+            height={110}
+            width={190}
+            objectFit="cover"
+            className="rounded"
+          />
+        <h5 className="mt-3">Kimchi</h5>
+        <div className="d-flex justify-content-between align-items-center">
+          <a href="#" className="btn bg-color">
+            81 Sell
+          </a>
+
+          <div className="d-flex">
+            <Image className="pb-3 m2" src={Vector} alt="" />
+            <p className="">29%</p>
+          </div>
         </div>
       </div>
-    </div>
-    </div>   
-    );
-  };
-  
-  export default BestSelling;
-  
+  );
+};
+
+export default BestSelling;

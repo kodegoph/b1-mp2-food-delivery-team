@@ -4,13 +4,13 @@ import OrderScroll from '../cards/OrderScroll'
 
 const OrderHistory = () => {
     return (
-      <div className="card text-light h-80 p-4 p-md-3 align-top">
-      <div className="d-flex justify-content-between z-index-1">
+      <div className="card p-5 p-md-3">
+      <div className="d-flex justify-content-between align-items-center">
         <h4>Order history</h4>
-        <div className="d-flex text-center">
+        <div className="d-flex align-items-center">
           <h5 className="p-2">Order Locations</h5>
-          <Dropdown className="border-radius">
-        <Dropdown.Toggle variant="primary" id="dropdown-Basic">
+          <Dropdown>
+        <Dropdown.Toggle variant="primary" id="dropdown-Basic" className="bg-color">
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
@@ -34,16 +34,15 @@ const OrderHistory = () => {
       </Dropdown>
         </div>
       </div>
-      <div className="d-flex m-1">
-        <h>$1.337</h>
-        <img className="m-1" src="./images/Arrow - Down.svg" alt="" />
-        <p>| This month</p>
+      <div className="d-flex">
+        <p>$1.337<span>| This month</span></p>
+        
       </div>
       <OrderScroll/>
       <Row className="d-flex justify-content-center mt-1">
         <p className="p-2">See Full history</p>
       <Dropdown>
-        <Dropdown.Toggle className="navbar-toggle" variant="primary" id="dropdown-Basic">
+        <Dropdown.Toggle className="navbar-toggle" variant="primary" id="dropdown-Basic" className="bg-color">
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
