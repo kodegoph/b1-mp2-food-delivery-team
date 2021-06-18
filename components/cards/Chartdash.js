@@ -4,13 +4,13 @@ import { Line } from 'react-chartjs-2'
 
 const LineChart = () => {
   return (
-    <div className="p-3">    
-    <Line
+    <div className="p-3 text-light">    
+    <Line 
         data={{
           labels: ['Sun', 'Mon', 'Tuey', 'Wen', 'Thur', 'Fri', 'Sat'],
           datasets: [
             {
-              
+              color: 'rgba(255, 99, 132, 0.2)',
               lineTension: 0.5,
               data: [4, 4, 3, 5, 3, 5,  4],
               backgroundColor: [
@@ -53,6 +53,7 @@ const LineChart = () => {
           legend: {
             labels: {
               fontSize: 30,
+              color: 'white'
             },
           },
         }}

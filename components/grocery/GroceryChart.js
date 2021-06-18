@@ -6,7 +6,7 @@ const GroceryChart = () => {
           <div className="card h-100">
         <div className="card-header">
         <span className="me-2"><i className="bi bi-bar-chart-fill"></i></span>
-                Area Chart Example
+                Sales for this Week
                
            </div>
            <LineChart/>
