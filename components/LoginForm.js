@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Image from "next/Image";
 import App from "next/app";
-
+import Picture from "../public/assets/images/k-shuttle.svg";
 class Login extends App {
     constructor(props) {
         super(props);
@@ -33,64 +34,53 @@ class Login extends App {
     render() {
         const {username, password, error} = this.state;
         return (
-            <div className="container">
-                <div className="row no-gutter">
-                    <div className="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-                    <div className="col-md-8 col-lg-6">
-                        <div className="login d-flex align-items-center py-5">
-                            <div className="container border-3 rounded">
-                                <div className="row">
-                                    <div className="col-md-9 col-lg-8 mx-auto">
-                                        <h3 className="login-heading mb-4">
-                                            Welcome back!
-                                        </h3>
-                                        {error && <div>Bad credentials</div>}
-                                        <form onSubmit={this.handleSubmit}>
-                                            <div className="form-label-group">
-                                                <input
-                                                    type="Name"
-                                                    name="username"
-                                                    className="form-control"
-                                                    placeholder="Username"
-                                                    required
-                                                    autofocus
-                                                    value={username}
-                                                    onChange={
-                                                        this.handleInputChange
-                                                    }
-                                                />
-                                                <label htmlFor="inputName">
-                                                    Username
-                                                </label>
-                                            </div>
-
-                                            <div className="form-label-group">
-                                                <input
-                                                    type="password"
-                                                    name="password"
-                                                    className="form-control"
-                                                    placeholder="Password"
-                                                    required
-                                                    value={password}
-                                                    onChange={
-                                                        this.handleInputChange
-                                                    }
-                                                />
-                                                <label htmlFor="inputPassword">
-                                                    Password
-                                                </label>
-                                            </div>
-
-                                            <button
-                                                className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-                                                type="submit">
-                                                Sign in
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+            <div className="container-fluid vh-100 vw-100 login">
+                <div className="row">
+                    <div className="col-6 col-lg-4 mx-auto py-auto login-card">
+                        <div className="d-flex justify-content-center mb-4">
+                            <Image src={Picture} width={200} alt="k-shuttle" />
                         </div>
+                        <h4 className="login-heading mb-5">
+                            Sign in to continue
+                        </h4>
+                        <form onSubmit={this.handleSubmit}>
+                            <div className="form-label-group">
+                                <label htmlFor="inputName">Username</label>
+                                <input
+                                    type="Name"
+                                    name="username"
+                                    className="form-control"
+                                    placeholder="Username"
+                                    required
+                                    autoFocus
+                                    value={username}
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
+                            <div className="form-label-group">
+                                <label htmlFor="inputPassword">Password</label>
+                                <input
+                                    type="password"
+                                    name="password"
+                                    className="form-control"
+                                    placeholder="Password"
+                                    required
+                                    value={password}
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
+                            {error && (
+                                <div className="error-message">
+                                    Invalid username and password. Please try
+                                    again
+                                </div>
+                            )}
+                            <button
+                                className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                                type="submit">
+                                Sign in
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

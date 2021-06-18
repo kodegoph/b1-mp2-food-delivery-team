@@ -65,27 +65,16 @@ const Sidebar = () => {
                                     </h6>
                                     <i className="bx bx-wrench"></i>
                                 </a>
-
-                                <Link href="/login">
-                                    <a
-                                        className="p-3 d-flex justify-content-md-end"
-                                        href="">
-                                        <h6 className="d-none d-md-block me-2">
-                                            Logout
-                                        </h6>
-                                        <i className="bx bxs-calendar-alt"></i>
-                                    </a>
-                                </Link>
                             </div>
                         </div>
-                        <Link href="/profile">
+                        <Link href="/login">
                             <a
-                                className="p-3 d-flex align-content-center justify-content-center"
+                                className="p-3 d-flex justify-content-md-end"
                                 href="">
-                                <p className="d-none d-md-block my-auto me-2">
-                                    Welcome, User
-                                </p>
-                                <i className="bx bxs-user-circle bx-md"></i>
+                                <h6 className="d-none d-md-block me-2">
+                                    Logout
+                                </h6>
+                                <i className="fas fa-sign-out-alt"></i>
                             </a>
                         </Link>
                     </div>
