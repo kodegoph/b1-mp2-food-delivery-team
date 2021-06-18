@@ -217,6 +217,28 @@ a.forgotpass {
     justify-content: end;
     align-items: flex-end;
 }
+.login {
+    background-color: #1f1d2b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    &-card {
+        padding: 2rem 1rem;
+        border: 3px solid $color-primary;
+    }
+    .form-label-group {
+        margin-bottom: 0.4rem;
+    }
+    .btn {
+        background-color: $color-primary;
+        border: none;
+    }
+    .btn:hover {
+        background-color: $color-primary-hover;
+    }
+}
 .error-message {
     color: red;
 }
