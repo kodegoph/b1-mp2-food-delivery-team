@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/Image";
 import App from "next/app";
+import Picture from "../public/assets/images/k-shuttle.svg";
 class Login extends App {
     constructor(props) {
         super(props);
@@ -35,11 +37,15 @@ class Login extends App {
             <div className="container-fluid vh-100 vw-100 login">
                 <div className="row">
                     <div className="col-6 col-lg-4 mx-auto py-auto login-card">
+                        <div className="d-flex justify-content-center mb-4">
+                            <Image src={Picture} width={200} />
+                        </div>
                         <h4 className="login-heading mb-5">
                             Sign in to continue
                         </h4>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-label-group">
+                                <label htmlFor="inputName">Username</label>
                                 <input
                                     type="Name"
                                     name="username"
@@ -50,10 +56,9 @@ class Login extends App {
                                     value={username}
                                     onChange={this.handleInputChange}
                                 />
-                                <label htmlFor="inputName">Username</label>
                             </div>
-
                             <div className="form-label-group">
+                                <label htmlFor="inputPassword">Password</label>
                                 <input
                                     type="password"
                                     name="password"
@@ -63,7 +68,6 @@ class Login extends App {
                                     value={password}
                                     onChange={this.handleInputChange}
                                 />
-                                <label htmlFor="inputPassword">Password</label>
                             </div>
                             {error && (
                                 <div className="error-message">
