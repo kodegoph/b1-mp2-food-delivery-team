@@ -1,6 +1,3 @@
-
-
-
 .form-control:active,
 .form-control:focus {
     outline: none;
@@ -219,4 +216,7 @@ input {
 a.forgotpass {
     justify-content: end;
     align-items: flex-end;
+}
+.error-message {
+    color: red;
 }
