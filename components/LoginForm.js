@@ -38,9 +38,14 @@ class Login extends App {
                 <div className="row">
                     <div className="col-6 col-lg-4 col-xl-3 mx-auto my-5 login-card">
                         <div className="d-flex justify-content-center mb-4">
-                            <Image src={Picture} width={200} alt="k-shuttle" />
+                            <Image
+                                src={Picture}
+                                height={200}
+                                width={200}
+                                alt="k-shuttle"
+                            />
                         </div>
-                        <h4 className="login-heading mb-5">
+                        <h4 className="login-heading d-flex mb-5 justify-content-center">
                             Sign in to continue
                         </h4>
                         <form onSubmit={this.handleSubmit}>

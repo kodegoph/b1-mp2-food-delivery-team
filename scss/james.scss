@@ -227,18 +227,14 @@ a.forgotpass {
         border-radius: 5px;
         display: flex;
         flex-direction: column;
-        align-items: center;
         .form-label-group {
-            margin-bottom: 0.5rem;
-            width: 120%;
-            margin-left: -1.2rem;
+            padding-bottom: 0.5rem;
+            justify-content: center;
         }
         .btn {
             background-color: $color-primary;
             border: none;
             color: white;
-            width: 120%;
-            margin-left: -1.2rem;
         }
         .btn:hover {
             background-color: $color-primary-hover;
