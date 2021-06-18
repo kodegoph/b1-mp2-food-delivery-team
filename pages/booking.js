@@ -1,8 +1,12 @@
+/** @format */
+
 import * as React from "react";
 import ReactMapGL from "react-map-gl";
-import { useState } from "react";
+import { useState, useEf } from "react";
 import JSONDATA from "../public/data/MOCK_DATA.json";
 import axios from "axios";
+import { Modal } from "react-responsive-modal";
+import "react-responsive-modal/styles.css";
 import ReactPaginate from "react-paginate";
 
 export const Booking = () => {
@@ -25,12 +29,16 @@ export const Booking = () => {
     }).sort((a, b) => (a.color > b.color ? 1 : -1))
   );
   const [pageNumber, setPageNumber] = useState(0);
+  const [open, setOpen] = useState(false);
 
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
   const usersPerPage = 4;
   const pagesVisited = pageNumber * usersPerPage;
   const displayUsers = users
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .filter((user) => {
+      let orderLength = 0;
       if (searchTerm == "") {
         return user;
       } else if (
@@ -43,21 +51,77 @@ export const Booking = () => {
     .map((user, key) => {
       return (
         <div className="col-12 order-card bg-card-booking mb-3" key={key}>
-          <div className="row">
-            <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
-              <img src={user.img} alt={user.restaurant_name} />
-            </div>
-            <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
-              <div className="badges">
-                <span className="badge bg-badge-secondary">Pro</span>
+          <a
+            className="cursor-pointer text-decoration-none"
+            onClick={onOpenModal}
+          >
+            <div className="row">
+              <div className="col-12 col-lg-5 col-xl-3 d-flex justify-content-center justify-content-lg-start">
+                <img src={user.img} alt={user.restaurant_name} />
               </div>
-              <h4>{user.restaurant_name}</h4>
-              <h6>
-                Order Number: <span id="order-num">{user.id}</span>
-              </h6>
-              <button className="btn bg-secondary">Complete</button>
+              <div className="col-12 col-lg-7 col-xl-9 d-flex flex-column align-items-center align-items-lg-start">
+                <div className="badges">
+                  <span className="badge bg-badge-secondary">Pro</span>
+                </div>
+                <h4>{user.restaurant_name}</h4>
+                <h6>
+                  Order Number: <span id="order-num">{user.id}</span>
+                </h6>
+                <button className="btn bg-secondary">Complete</button>
+              </div>
+            </div>
+          </a>
+          <Modal open={open} onClose={onCloseModal} center>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-md-6">
+            <h3>Items</h3>
+          </div>
+          <div className="col-12 col-md-2 justify-content-center d-none d-md-flex">
+            <h3>Qty</h3>
+          </div>
+          <div className="col-12 col-md-2 justify-content-center d-none d-md-flex">
+            <h3>Price</h3>
+          </div>
+          <div className="col-12 col-md-2 justify-content-center d-none d-md-flex">
+            <h3>Total Price</h3>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 col-md-6 justify-content-center justify-content-md-start d-flex">
+            <div className="row">
+              <div className="col-12 col-md-6">
+                <img
+                  src={user.img}
+                  alt={user.restaurant_name}
+                  className="w-100 h-100 me-3"
+                />
+              </div>
+              <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-start flex-column">
+                <h4 className="mt-2 mt-md-0">{user.food[0].food_type}</h4>
+                <h3>{user.food[0].food_name}</h3>
+                <p className="d-md-none">Quantity: {user.food[0].quantity}</p>
+                <p className="d-md-none">Price: ${user.food[0].price}</p>
+                <p className="d-md-none">
+                  Total Price: ${user.food[0].quantity * user.food[0].price}
+                </p>
+              </div>
             </div>
           </div>
+          <div className="col-12 col-md-2 justify-content-center align-items-center d-flex d-none d-md-block">
+            <p className="text-center">{user.food[0].quantity}</p>
+          </div>
+          <div className="col-12 col-md-2 justify-content-center align-items-center d-flex d-none d-md-block">
+            <p className="text-center">${user.food[0].price}</p>
+          </div>
+          <div className="col-12 col-md-2 justify-content-center align-items-center d-flex d-none d-md-block">
+            <p className="text-center">
+              ${user.food[0].quantity * user.food[0].price}
+            </p>
+          </div>
+        </div>
+      </div>
+    </Modal>
         </div>
       );
     })
@@ -95,12 +159,12 @@ export const Booking = () => {
                   }}
                 />
               </div>
-              <div className="row">
+              <div className="row mb-2">
                 <div className="col-12 col-md-6 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-between">
                   <div className="food-header d-flex">
                     <h2 className="me-3 mb-0">Food Delivery</h2>
                     <p id="search-result" className="mb-0 align-self-end">
-                      results
+                      {users.length} results
                     </p>
                   </div>
                 </div>

@@ -2,11 +2,13 @@ import Modals from '../cards/Modals'
 
 const Categories = () => {
     return (
-      <div className="card bg-white text-dark p-3">
-      <div className="card-body"><h4>Select Movie Categories</h4></div>
-      <div className="d-flex justify-content-between px-3">
-        <p>Select your favourite food menu</p>
+      <div className="card text-light p-md-4 p-sm-1  border-radius-lg">
+      <h4 className="px-3">Select Food Categories</h4>
+      <div className="d-flex justify-content-between  px-3 row">
+        <h6 className=" col-sm-6">Select your favourite food menu</h6>
+        <div className=" col-md-6 col-xl-3">
         <Modals/>
+        </div>
       </div>
       <div
         className="
@@ -22,31 +24,32 @@ const Categories = () => {
             className="card bg-light border-3 pd-3 m-auto"
             style={{width: '8rem', height : '8rem'}}
           ></div>
-          <p className="">Action</p>
+          <p className="">Bulgogi</p>
         </div>
         <div className="text-center col-sm-6 col-xl-3">
           <div
             className="card bg-light border-3 m-auto"
             style={{width: '8rem', height : '8rem'}}
           ></div>
-          <p className="">Action</p>
+          <p className="">Samgyeopsal</p>
         </div>
-        <div className="text-center col-sm-3 col-md-6 col-xl-3">
+        <div className="text-center col-sm-6 col-xl-3">
           <div
             className="card bg-light border-3 m-auto"
             style={{width: '8rem', height : '8rem'}}>
             </div>
-          <p className="">Action</p>
+          <p className="">Ddukbokki</p>
         </div>
-        <div className="text-center col-sm-3 col-md-6 col-xl-3">
+        <div className="text-center col-sm-6 col-xl-3">
           <div
             className="card bg-light border-3 m-auto"
             style={{width: '8rem', height : '8rem'}}
           ></div>
-          <p className="">Action</p>
+          <p className="">Bibimbap</p>
         </div>
       </div>
-    </div>
+      </div>
+    
     );
   };
   

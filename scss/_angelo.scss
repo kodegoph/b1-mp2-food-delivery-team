@@ -1,3 +1,21 @@
+/** @format */
+
 .color-header {
   color: pink !important;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 18px;
+  height: 1px;
+  border-radius: 1px;
+}
+#admin-dashboard {
+  .card {
+    background-color: #353340;
+  }
+  .list-group-item {
+    background-color: #242230;
+    color: white;
+  }
 }

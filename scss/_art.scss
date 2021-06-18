@@ -5,9 +5,14 @@
   border-radius: 10px;
   padding: 1.5rem;
 }
+.react-responsive-modal-modal {
+  padding: 3.2rem !important;
+  background-color: #353340 !important;
+  color: white !important;
+}
 #search-and-profile {
   .x-icon {
-    top: 25px;
+    top: 15px;
     right: 15px;
     color: $color-primary;
   }
@@ -88,5 +93,10 @@
     background-color: rgba(255, 255, 255, 255);
     color: #dfe3ed;
     margin-top: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .react-responsive-modal-modal {
+    width: 100%;
   }
 }
