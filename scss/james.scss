@@ -235,6 +235,9 @@ a.forgotpass {
             margin-bottom: 1rem;
             padding-left: 1rem;
             padding-right: 1rem;
+            .form-control {
+                background-color: #d6d6d6;
+            }
         }
         .btn {
             background-color: $color-primary;

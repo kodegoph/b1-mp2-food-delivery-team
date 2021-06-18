@@ -38,7 +38,7 @@ class Login extends App {
                 <div className="row">
                     <div className="col-6 col-lg-4 mx-auto py-auto login-card">
                         <div className="d-flex justify-content-center mb-4">
-                            <Image src={Picture} width={200} />
+                            <Image src={Picture} width={200} alt="k-shuttle" />
                         </div>
                         <h4 className="login-heading mb-5">
                             Sign in to continue
@@ -71,7 +71,8 @@ class Login extends App {
                             </div>
                             {error && (
                                 <div className="error-message">
-                                    Wrong username and password
+                                    Invalid username and password. Please try
+                                    again
                                 </div>
                             )}
                             <button
