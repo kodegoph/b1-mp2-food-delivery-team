@@ -4,7 +4,7 @@ import OrderScroll from '../cards/OrderScroll'
 
 const OrderHistory = () => {
     return (
-      <div className="card text-light h-80 p-4 p-md-3 align-top">
+      <div className="card h-80 p-4 p-md-3 align-top">
       <div className="d-flex justify-content-between z-index-1">
         <h4>Order history</h4>
         <div className="d-flex text-center">

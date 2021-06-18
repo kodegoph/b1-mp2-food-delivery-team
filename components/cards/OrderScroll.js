@@ -8,6 +8,7 @@ const style = {
   border: "none",
   margin: 6,
   padding: 8
+  
 };
 
 class OrderScroll extends React.Component {
@@ -15,6 +16,7 @@ class OrderScroll extends React.Component {
     items: Array.from({ length: 20 }),
     hasMore: true
   };
+
 
   fetchMoreData = () => {
     if (this.state.items.length >= 500) {

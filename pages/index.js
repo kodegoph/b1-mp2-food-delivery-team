@@ -17,7 +17,7 @@ const Home = () => {
         <title>Dashboard | Grocery</title>
       </Head>
       <section id="admin-dashboard">
-        <main className="me-main p-2 h-100 bg-color font-primary text-light">
+        <main className="me-main p-2 h-100 bg-color font-primary">
           <div className="container-fluid">
             <HeaderDash />
             <div className="row row-fluid gx-4">
@@ -41,10 +41,10 @@ const Home = () => {
                       </div>
                     </div>
                     <div className="row row-fluid g-4 pt-2">
-                      <div className="col-md-12 col-lg-6 mb-3  col-xs-12">
+                      <div className="col-md-12 col-lg-12 col-xl-6 mb-3  col-xs-12">
                         <GrocerySales />
                       </div>
-                      <div className="col-md-12 col-lg-6 mb-3  col-xs-12">
+                      <div className="col-md-12 col-lg-12  col-xl-6  mb-3  col-xs-12">
                         <TicketSales />
                       </div>
                     </div>

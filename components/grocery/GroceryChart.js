@@ -3,10 +3,10 @@ import LineChart from  '../cards/Chartdash'
 const GroceryChart = () => {
   return (
            <>
-          <div className="card h-100">
-        <div className="card-header">
-        <span className="me-2"><i className="bi bi-bar-chart-fill"></i></span>
-                Sales for this Week
+          <div className="card h-100 p-0">
+        <div className="card-header m-auto">
+        <span className=""></span>
+                <h5>Sales for this Week</h5>
                
            </div>
            <LineChart/>
