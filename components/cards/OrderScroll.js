@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Names from "./OrderAPI"
 
 const style = {
   height: 90,
@@ -58,6 +59,7 @@ class OrderScroll extends React.Component {
             d-flex
             justify-content-between
             cursor-pointer
+
             list-group-item
           "
         >
@@ -73,7 +75,7 @@ class OrderScroll extends React.Component {
             </div>
           </div>
           <div>
-            <h6>$19.89</h6>  
+            <h6>$19.89</h6>  div - #{index}
           </div>
         </div>
   
