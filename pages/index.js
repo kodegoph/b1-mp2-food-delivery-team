@@ -20,38 +20,36 @@ const Home = () => {
         <main className="me-main p-2 h-100 bg-color font-primary">
           <div className="container-fluid">
             <HeaderDash />
-            <div className="row row-fluid gx-4">
+            <div className="row">
               <div className="col-md-8 mb-3">
-                <div className="row row-fluid gx-4">
-                  <div className="col-md-8 mb-3 pt-3 pt-lg-0">
+                <div className="row">
+                  <div className="col-12 col-lg-8 p-3">
                     <Categories />
                   </div>
-                  <BestSelling />
-
-                 
+                  <div className="col-12 col-lg-4 p-3">
+                    <BestSelling />
+                  </div>
                 </div>
-                <div className="row gx-3">
-                  <div className="col-md-7 mb-3">
+                <div className="row">
+                  <div className="col-12 col-lg-7 mb-3 py-3">
                     <OrderHistory />
                   </div>
-                  <div className="col-md-5 mb-3">
-                    <div className="row row-fluid gx-5 ">
+                  <div className="col-12 col-lg-5 mb-3 py-3">
+                    <div className="row">
                       <div className="col-md-12 mb-3">
                         <LineChart />
                       </div>
-                    </div>
-                    <div className="row row-fluid g-4 pt-2">
-                      <div className="col-md-12 col-lg-12 col-xl-6 mb-3  col-xs-12">
+                      <div className="col-12 col-lg-6 mb-3">
                         <GrocerySales />
                       </div>
-                      <div className="col-md-12 col-lg-12  col-xl-6  mb-3  col-xs-12">
+                      <div className="col-12 col-lg-6 mb-3">
                         <TicketSales />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 mb-3">
+              <div className="col-12 col-md-4 mb-3">
                 <BillingInfo />
               </div>
             </div>

@@ -15,7 +15,7 @@ const App = () => {
   return (
         <>
     <div className="">
-        <h6><a className=" cursor-pointer text-light view overlay" onClick={onOpenModal}>View all</a></h6>
+        <h6><a className=" cursor-pointer font-primary view overlay" onClick={onOpenModal}>View all</a></h6>
       <Modal open={open} onClose={onCloseModal} center>
         <h2 className="pt-4 text-center">All Favourite Korean Foods</h2>
         <div className='row d-flex justify-content-around'>
@@ -25,7 +25,6 @@ const App = () => {
               <div className="card-body">
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
-           
              </div>
             </div>
             <div className="col-md-6 col-12 col-xl-3">

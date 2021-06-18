@@ -35,13 +35,7 @@ class OrderScroll extends React.Component {
   render() {
     return (
       <div>
-       
-        <hr className="m-1" />
-        <div className="d-flex justify-content-around text-bold">
-        <p>Name / Order Number</p>
-        <p>Amount/Status</p>
-        </div>
-        <InfiniteScroll
+       <InfiniteScroll
           dataLength={this.state.items.length}
           next={this.fetchMoreData}
           hasMore={this.state.hasMore}
@@ -84,7 +78,8 @@ class OrderScroll extends React.Component {
             </div>
           ))}
         </InfiniteScroll>
-      </div>
+        </div>
+        
 
       
     );

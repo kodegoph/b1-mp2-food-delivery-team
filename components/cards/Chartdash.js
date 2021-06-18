@@ -53,7 +53,7 @@ const LineChart = () => {
             ],
           },
           legend: {
-            labels: {
+            labels:  {
               fontSize: 30,
               color: 'black'
             },
