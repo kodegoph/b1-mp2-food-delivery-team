@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const style = {
-  height: 110,
+  height: 90,
   border: "none",
   margin: 6,
   padding: 8
@@ -43,7 +43,7 @@ class OrderScroll extends React.Component {
           next={this.fetchMoreData}
           hasMore={this.state.hasMore}
           loader={<h4>Loading...</h4>}
-          height={340}
+          height={300}
           endMessage={
             <p style={{ textAlign: "center" }}>
               <b>Yay! You have seen it all</b>
@@ -51,15 +51,14 @@ class OrderScroll extends React.Component {
           }
         >
           {this.state.items.map((i, index) => (
-            <div className="border-none" style={style} key={index}>
+            <div className="border-none py-3" style={style} key={index}>
              <div
           className="
             list-group-item
-            border-white
             d-flex
             justify-content-between
             cursor-pointer
-            list-group-item-action
+            list-group-item
           "
         >
           <div className="d-flex">
@@ -74,7 +73,7 @@ class OrderScroll extends React.Component {
             </div>
           </div>
           <div>
-            <h6>$19.89</h6>  div - #{index}
+            <h6>$19.89</h6>  
           </div>
         </div>
   

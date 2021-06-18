@@ -1,99 +1,95 @@
 const BillingInfo = () => {
     return (
-        <div className="card h-100 p-5">
-        <h3 className="">Billing Information</h3>
-        <h6 className="">Point Location</h6>
-        <div className="p-3 card bg-light">
-          <h6>St. Village 1191 Est, NYC</h6>
-          <p>New York, USA</p>
-        </div>
-        <h6 className="mt-5">Voucher</h6>
-
-        <textarea className="bg-light" name="" id="Voucher">
-              Code Voucher
-              </textarea>
-
-        <h6 className="mt-5 mb-3">Payment</h6>
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault1"
-          />
-          <label className="form-check-label" for="flexRadioDefault1">
-            Credit Card
-          </label>
-        </div>
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
-            checked
-          />
-          <label className="form-check-label" for="flexRadioDefault2">
-            Paypal
-          </label>
-        </div>
-        <div className="d-flex mt-5">
-          <div
-            className="card bg-light border-3"
-            style={{width : '8rem', height : '8rem'}}
-          ></div>
-          <div className="card p-4 bg-white border-0">
-            <h6>Super Fresh Carrot</h6>
-            <p>Variant: Fresh</p>
+        <div className="card p-4 p-md-4 mb-3">
+        
+          <div className="d-flex  justify-content-lg-between">
+          <h5>Most Favorite Korean Food</h5>
+          
+          <div className="d-flex pt-4 ">
+               <h6 className="p-2 cursor-pointer">Monthly</h6> 
+               <h6 className="p-2 cursor-pointer">Weekly</h6> 
+               <h6 className="p-2 cursor-pointer text-decoration-underline">Today</h6> 
           </div>
-        </div>
-        <ul className="list-group list-group-flush border-0 pt-2">
-          <li
-            className="
-              border-0
-              list-group-item
-              d-flex
-              justify-content-between
-              align-items-center
-              flex-wrap
-            "
-          >
-            <h6 className="mb-0">Subtotal</h6>
-            <span className="text-secondary">$149.99</span>
-          </li>
-          <li
-            className="
-              border-0
-              list-group-item
-              d-flex
-              justify-content-between
-              align-items-center
-              flex-wrap
-            "
-          >
-            <h6 className="mb-0">Shipping</h6>
-            <span className="text-secondary">Free</span>
-          </li>
-          <li
-            className="
-              border-0 border-none
-              list-group-item
-              d-flex
-              justify-content-between
-              align-items-center
-              flex-wrap
-            "
-          >
-            <h6 className="mb-0">Total</h6>
-            <span className="text-secondary">$149.99</span>
-          </li>
-        </ul>
-        <div className="d-grid gap-2 col-6 mx-auto mt-5">
-          <button className="btn btn-warning rounded-pill" type="button">
-            Checkout Now
-          </button>
-        </div>
-      </div>
+          </div>
+          <div className="container">
+                <div className="row ml-auto d-flex align-items-center ">
+                  <div className="col-xs-12">Whatever you want full row</div>
+                  <div className="col-xs-2 col-md-6 col-xl-4 mt-3"> 
+                  <div className="card m-auto" style={{width: '8rem'}}>
+                            <img className="card-img-top" src="http://lorempixel.com/100/150/food/Dummy-Text" alt="Card image cap"/>
+                            <div className="card-body">
+                              <p className="card-text">hehe</p>
+                              <div className="text-center">
+                                <p>267k Likes it</p>
+                              </div>
+                            </div>
+                            </div></div>
+                  <div className="col-xs-2 col-md-6 col-xl-4 mt-3"> <div className="card m-auto" style={{width: '8rem'}}>
+                            <img className="card-img-top" src="http://lorempixel.com/100/150/food/Dummy-Text" alt="Card image cap"/>
+                            <div className="card-body">
+                              <p className="card-text">hehe</p>
+                              <div className="text-center">
+                                <p>267k Likes it</p>
+                              </div>
+                            </div>
+                            </div></div>
+                  <div className="col-xs-2 col-md-6 col-xl-4 mt-3"> <div className="card m-auto" style={{width: '8rem'}}>
+                            <img className="card-img-top" src="http://lorempixel.com/100/150/food/Dummy-Text" alt="Card image cap"/>
+                            <div className="card-body">
+                              <p className="card-text">hehe</p>
+                              <div className="text-center">
+                                <p>267k Likes it</p>
+                              </div>
+                            </div>
+                            </div></div>
+                  </div>
+                  <div className="row">
+                  <div className="col-xs-2 col-md-6 col-xl-4 mt-3"> <div className="card m-auto" style={{width: '8rem'}}>
+                            <img className="card-img-top" src="http://lorempixel.com/100/150/food/Dummy-Text" alt="Card image cap"/>
+                            <div className="card-body">
+                              <p className="card-text">hehe</p>
+                              <div className="text-center">
+                                <p>267k Likes it</p>
+                              </div>
+                            </div>
+                            </div></div>
+                  <div className="col-xs-2 col-md-6 col-xl-4 mt-3"> <div className="card m-auto" style={{width: '8rem'}}>
+                            <img className="card-img-top" src="http://lorempixel.com/100/150/food/Dummy-Text" alt="Card image cap"/>
+                            <div className="card-body">
+                              <p className="card-text">hehe</p>
+                              <div className="text-center">
+                                <p>267k Likes it</p>
+                              </div>
+                            </div>
+                            </div></div>
+                  <div className="col-xs-2 col-md-6 col-xl-4 mt-3"> <div className="card m-auto" style={{width: '8rem'}}>
+                            <img className="card-img-top" src="http://lorempixel.com/100/150/food/Dummy-Text" alt="Card image cap"/>
+                            <div className="card-body">
+                              <p className="card-text">hehe</p>
+                              <div className="text-center">
+                                <p>267k Likes it</p>
+                              </div>
+                            </div>
+                            </div></div>
+
+                </div>
+              </div>
+
+          <div className="row">
+             <div className="dropdown show  d-flex justify-content-center mt-1">
+              <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               View More
+              </a>
+
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a className="dropdown-item" href="#">Action</a>
+                <a className="dropdown-item" href="#">Another action</a>
+                <a className="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            </div>
+          </div>
+         
     );
   };
   
