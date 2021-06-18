@@ -10,7 +10,7 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-    {id: "name", label: "Name", minWidth: 170},
+    {id: "customerid", label: "Customer ID", minWidth: 170},
     {id: "code", label: "ISO\u00a0Code", minWidth: 100},
     {
         id: "population",
@@ -35,9 +35,9 @@ const columns = [
     },
 ];
 
-function createData(name, code, population, size) {
+function createData(customerid, code, population, size) {
     const density = population / size;
-    return {name, code, population, size, density};
+    return {customerid, code, population, size, density};
 }
 
 const rows = [
@@ -63,7 +63,7 @@ const useStyles = makeStyles({
         width: "100%",
     },
     container: {
-        maxHeight: 440,
+        maxHeight: 1000,
     },
 });
 
@@ -131,6 +131,7 @@ export default function StickyHeadTable() {
             </TableContainer>
             <TablePagination
                 rowsPerPageOptions={[10, 25, 100]}
+                className="btn"
                 component="div"
                 count={rows.length}
                 rowsPerPage={rowsPerPage}
