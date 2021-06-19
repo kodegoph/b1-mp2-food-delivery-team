@@ -1,11 +1,10 @@
-import Scheduler from "../components/Scheduler";
 import App from "../components/App";
 
 export const Calendar = () => {
     return (
         <main className="me-main p-4 h-100 bg-color font-primary">
             <section>
-                <div className="container-fluid">
+                <div className="container-fluid schedule">
                     <div className="col-xxl-12">
                         <div className="row">
                             <div className="col-md-4 mx-4">

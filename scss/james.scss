@@ -63,12 +63,6 @@
     height: 100vh;
     margin-left: auto;
 }
-
-.dummy-calendar {
-    width: auto;
-    height: 80vh;
-    background-color: pink;
-}
 .btn {
     margin-top: 0.25rem;
     width: max-content;
@@ -104,10 +98,14 @@ body {
 .month {
     padding: 70px 25px;
     width: 100%;
-    background: #5372e7;
+    background: #d3d3d3;
     text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
-
+.schedule {
+    color: white;
+}
 /* Month list */
 .month ul {
     margin: 0;
