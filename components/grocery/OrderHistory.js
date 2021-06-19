@@ -1,6 +1,6 @@
-import Dropdown from 'react-bootstrap/Dropdown'
 import Row from 'react-bootstrap/Dropdown'
 import OrderScroll from '../cards/OrderScroll'
+import Dropdown from 'react-bootstrap/Dropdown'
 
 const OrderHistory = () => {
     return (
@@ -46,8 +46,8 @@ const OrderHistory = () => {
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item href="#/action-1">Open New Page</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">View Here</Dropdown.Item>
+          <Dropdown.Item href="#/action-1">Previous Year</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Previous Month</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
       </Row>

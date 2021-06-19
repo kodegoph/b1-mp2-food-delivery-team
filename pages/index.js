@@ -39,18 +39,22 @@ const Home = () => {
                       <div className="col-md-12 mb-3">
                         <LineChart />
                       </div>
-                      <div className="col-12 col-lg-6 mb-3">
+                      <div className="col-12 mb-3">
                         <GrocerySales />
                       </div>
-                      <div className="col-12 col-lg-6 mb-3">
+                      <div className="col-12 mb-3">
                         <TicketSales />
                       </div>
                     </div>
-                  </div>ty
+                  </div>
                 </div>
               </div>
               <div className="col-12 col-md-4 mb-3">
-                <BillingInfo />
+                <div className="row">
+                  <div className="col-12 p-3 mb-3">
+                    <BillingInfo />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
