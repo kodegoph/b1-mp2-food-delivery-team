@@ -11,29 +11,33 @@ import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
     {id: "customerid", label: "Customer ID", minWidth: 150},
+<<<<<<< Updated upstream
     {id: "joindate", label: "Date joined", minWidth: 150},
+=======
+    {id: "joindate", label: "Date joined", minWidth: 170},
+>>>>>>> Stashed changes
     {
         id: "custname",
         label: "Customer Name",
         minWidth: 170,
     },
     {
-        id: "size",
-        label: "Size\u00a0(km\u00b2)",
-        minWidth: 170,
+        id: "total",
+        label: "Total spent",
+        minWidth: 150,
         align: "right",
         format: (value) => value.toLocaleString("en-US"),
     },
     {
-        id: "density",
-        label: "Density",
+        id: "last",
+        label: "Last Transaction",
         minWidth: 170,
         align: "right",
     },
 ];
 
-function createData(customerid, joindate, custname, size, density) {
-    return {customerid, joindate, custname, size, density};
+function createData(customerid, joindate, custname, total, last) {
+    return {customerid, joindate, custname, total, last};
 }
 
 const rows = [
@@ -59,7 +63,7 @@ const useStyles = makeStyles({
         width: "100%",
     },
     container: {
-        maxHeight: 1000,
+        maxHeight: 600,
     },
 });
 

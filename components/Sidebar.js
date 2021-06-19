@@ -79,12 +79,12 @@ const Sidebar = () => {
                         </div>
                         <Link href="/login">
                             <a
-                                className="p-3 d-flex justify-content-md-end"
+                                className="p-3 d-flex justify-content-md-baseline"
                                 href="">
                                 <h6 className="d-none d-md-block me-2">
                                     Logout
                                 </h6>
-                                <i className="fas fa-sign-out-alt"></i>
+                                <i className="bx bx-log-out"></i>
                             </a>
                         </Link>
                     </div>
