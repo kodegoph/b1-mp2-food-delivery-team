@@ -16,7 +16,7 @@ export const Calendar = () => {
                                 <App />
                             </div>
 
-                            <div className="col-md-4">
+                            <div className="col-md-4 d-none d-lg-block">
                                 <div className="month">
                                     <ul>
                                         <li className="prev">&#10094;</li>
