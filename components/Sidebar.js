@@ -75,7 +75,7 @@ const Sidebar = () => {
                 className="p-3 d-flex justify-content-md-end dasboard-icon"
                 href=""
               >
-                <i class="bx bx-log-out pt-1 me-2"></i>
+                <i className="bx bx-log-out pt-1 me-2"></i>
                 <h6 className="d-none d-md-block">Logout</h6>
               </a>
             </Link>

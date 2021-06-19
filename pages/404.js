@@ -6,7 +6,7 @@ const errorNotFound = () => {
     
     const router = errorNotFound();
 
-    useEffect(() => {
+    errorNotFound(() => {
         setTimeout(() => {
             router.push('/')        
         },5000)

@@ -51,7 +51,7 @@ class MyDocument extends Document {
                         href="assets/css/header-colors.css"
                     />
                 </Head>
-                <body onload="info_noti()">
+                <body onLoad="info_noti()">
                     <Main />
                     <script src="assets/js/bootstrap.bundle.min.js"></script>
                     {/* <script src="assets/js/jquery.min.js"></script>

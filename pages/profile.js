@@ -30,7 +30,7 @@ const profile = () => {
                 action="/action_page.php"
                 className="d-flex flex-column pe-5"
               >
-                <label for="fname" className="mb-3">
+                <label htmlFor="fname" className="mb-3">
                   First name*:
                 </label>
                 <input
@@ -39,7 +39,7 @@ const profile = () => {
                   name="fname"
                   className="text-input mb-3"
                 />
-                <label for="lname" className="mb-3">
+                <label htmlFor="lname" className="mb-3">
                   Last name*:
                 </label>
                 <input

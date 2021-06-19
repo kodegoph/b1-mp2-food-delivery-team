@@ -33,7 +33,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2016/10/1.-Oven-Baked-Korean-BBQ-Beef-Ribs-Recipe.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -49,7 +48,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2015/11/6.-Bulgogi-Rice-Burger.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -65,7 +63,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2013/04/2.-Korean-Spicy-Pork-Jeyuk-Bokkeum.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -81,7 +78,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2019/09/1.-Chicken-Bulgogi.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -97,7 +93,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2006/10/1.-Kongnamul-Bap-Soybean-Sprout-Rice.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -113,7 +108,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2018/02/2.-Bulgogi-Stew.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -129,7 +123,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2020/02/0.-Nuclear-Fire-Noodle-Fries.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -145,7 +138,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2019/10/1.-Toowoomba-Pasta.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -161,7 +153,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2020/02/1.-Doenjang-Jjigae.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -177,7 +168,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2019/12/1.-Korean-Braised-Potatoes.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -193,7 +183,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2006/10/1.-Easy-Kimbap.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"
@@ -209,7 +198,6 @@ const App = () => {
                 <Image
                   src="https://mykoreankitchen.com/wp-content/uploads/2016/04/2.-Jjampong.jpg"
                   alt="placeholder image"
-                  alt={`my-image`}
                   height={110}
                   width={190}
                   objectFit="cover"

@@ -206,10 +206,10 @@ export const Booking = () => {
                     </div>
                     <div className="contact-driver d-flex align-items-center flex-column justify-content-center flex-lg-row">
                       <a href="">
-                        <i class="bx bxs-phone bx-2x me-0"></i>
+                        <i className="bx bxs-phone bx-2x me-0"></i>
                       </a>
                       <a href="">
-                        <i class="bx bx-current-location bx-2x me-0"></i>
+                        <i className="bx bx-current-location bx-2x me-0"></i>
                       </a>
                     </div>
                   </div>

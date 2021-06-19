@@ -6,7 +6,7 @@ const forgotpass = () => {
                     <div className="card-change">
                         <h1 className="center">Forgot password</h1>
                         <form>
-                            <label for="email">Enter your email</label>
+                            <label htmlFor="email">Enter your email</label>
                             <input
                                 type="text"
                                 placeholder="email@example.com"></input>

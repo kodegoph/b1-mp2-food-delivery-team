@@ -43,7 +43,7 @@ const OrderHistory = () => {
       <Row className="d-flex justify-content-center mt-2">
         <p className="m-2">See Full history</p>
         <Dropdown>
-        <Dropdown.Toggle className="navbar-toggle" variant="primary" id="dropdown-Basic" className="bg-color toggle-history">
+        <Dropdown.Toggle variant="primary" id="dropdown-Basic" className="navbar-toggle bg-color toggle-history">
 
         </Dropdown.Toggle>
 
