@@ -30,10 +30,10 @@ const Sidebar = () => {
                                     <a
                                         className="p-3 d-flex justify-content-md-end dasboard-icon"
                                         href="">
-                                        <h6 className="d-none d-md-block me-2 text-dark">
+                                        <h6 className="d-none d-md-block me-2 text-dark  dasboard-icon">
                                             Dashboard
                                         </h6>
-                                        <i className="bx bxs-dashboard pt-1 text-dark"></i>
+                                        <i className="bx bxs-dashboard pt-1 text-dark  dasboard-icon"></i>
                                     </a>
                                 </Link>
                                 <Link href="/booking">
@@ -60,10 +60,10 @@ const Sidebar = () => {
                                     <a
                                         className="p-3 d-flex justify-content-md-end"
                                         href="">
-                                        <h6 className="d-none d-md-block me-2">
+                                        <h6 className="d-none d-md-block me-2 text-dark">
                                             Customers
                                         </h6>
-                                        <i className="bx bx-user"></i>
+                                        <i className="bx bx-user text-dark"></i>
                                     </a>
                                 </Link>
 
