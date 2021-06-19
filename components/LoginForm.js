@@ -34,13 +34,18 @@ class Login extends App {
     render() {
         const {username, password, error} = this.state;
         return (
-            <div className="container-fluid vh-100 vw-100 login">
+            <div className="container-fluid login">
                 <div className="row">
-                    <div className="col-6 col-lg-4 mx-auto py-auto login-card">
+                    <div className="col-6 col-lg-4 col-xl-3 mx-auto my-5 login-card">
                         <div className="d-flex justify-content-center mb-4">
-                            <Image src={Picture} width={200} alt="k-shuttle" />
+                            <Image
+                                src={Picture}
+                                height={200}
+                                width={200}
+                                alt="k-shuttle"
+                            />
                         </div>
-                        <h4 className="login-heading mb-5">
+                        <h4 className="login-heading d-flex mb-5 justify-content-center">
                             Sign in to continue
                         </h4>
                         <form onSubmit={this.handleSubmit}>
@@ -71,12 +76,11 @@ class Login extends App {
                             </div>
                             {error && (
                                 <div className="error-message">
-                                    Invalid username and password. Please try
-                                    again
+                                    Wrong username and password.
                                 </div>
                             )}
                             <button
-                                className="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                                className="btn btn-lg text-uppercase font-weight-bold "
                                 type="submit">
                                 Sign in
                             </button>
