@@ -72,10 +72,10 @@ const rows = [
     createData("#1510038", "6/12/21", "Veronica Vernon", "$20.00", "Delivered"),
     createData("#1510071", "6/7/21", "Franky Itadory", "$80.00", "Delivered"),
     createData("#1510001", "6/2/21", "Jessica Wong", "$55.90", "Delivered"),
-    createData("#1510043", "2/6/21", "Emilia Johansson", 242495),
-    createData("#1510019", "4/19/21", "Jui Hong", 17098246),
-    createData("#1510023", "5/7/21", "Jarl Varg", 923768),
-    createData("#1510039", "5/9/21", "Rober Blake", 8515767),
+    createData("#1510043", "6/2/21", "Emilia Johansson", "$80.00", "Delivered"),
+    createData("#1510019", "6/1/21", "Jui Hong", "$80.00", "Delivered"),
+    createData("#1510023", "5/29/21", "Jarl Varg", "$190.00", "Delivered"),
+    createData("#1510039", "5/29/21", "Rober Blake", "$250.00", "Delivered"),
 ];
 
 const useStyles = makeStyles({
