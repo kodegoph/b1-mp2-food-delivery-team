@@ -10,14 +10,12 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-    {id: "customerid", label: "Customer ID", minWidth: 170},
-    {id: "code", label: "ISO\u00a0Code", minWidth: 100},
+    {id: "customerid", label: "Customer ID", minWidth: 150},
+    {id: "joindate", label: "Date joined", minWidth: 150},
     {
-        id: "population",
-        label: "Population",
+        id: "custname",
+        label: "Customer Name",
         minWidth: 170,
-        align: "right",
-        format: (value) => value.toLocaleString("en-US"),
     },
     {
         id: "size",
@@ -31,31 +29,29 @@ const columns = [
         label: "Density",
         minWidth: 170,
         align: "right",
-        format: (value) => value.toFixed(2),
     },
 ];
 
-function createData(customerid, code, population, size) {
-    const density = population / size;
-    return {customerid, code, population, size, density};
+function createData(customerid, joindate, custname, size, density) {
+    return {customerid, joindate, custname, size, density};
 }
 
 const rows = [
-    createData("India", "IN", 1324171354, 3287263),
-    createData("China", "CN", 1403500365, 9596961),
-    createData("Italy", "IT", 60483973, 301340),
-    createData("United States", "US", 327167434, 9833520),
-    createData("Canada", "CA", 37602103, 9984670),
-    createData("Australia", "AU", 25475400, 7692024),
-    createData("Germany", "DE", 83019200, 357578),
-    createData("Ireland", "IE", 4857000, 70273),
-    createData("Mexico", "MX", 126577691, 1972550),
-    createData("Japan", "JP", 126317000, 377973),
-    createData("France", "FR", 67022000, 640679),
-    createData("United Kingdom", "GB", 67545757, 242495),
-    createData("Russia", "RU", 146793744, 17098246),
-    createData("Nigeria", "NG", 200962417, 923768),
-    createData("Brazil", "BR", 210147125, 8515767),
+    createData("C-004562", "1/04/20", "Olivia Shine", 3287263, 22),
+    createData("C-00458", "1/04/20", "Rendy Greenlee", 9596961),
+    createData("C-004563", "1/05/20", "Roberto Carlo", 301340),
+    createData("C-004563", "1/07/20", "David Horizon", 9833520),
+    createData("C-00456", "1/10/20", "Oliver Sykes", 9984670),
+    createData("C-004560", "2/14/20", "Danny Worsnop", 7692024),
+    createData("C-00451", "3/5/20", "Jeremy McKinnon", 357578),
+    createData("C-004564", "3/20/20", "Samantha Bake", 70273),
+    createData("C-00459", "9/15/20", "Veronica Vernon", 1972550),
+    createData("C-00457", "11/7/20", "Franky Itadory", 377973),
+    createData("C-00487", "12/5/20", "Jessica Wong", 640679),
+    createData("C-00448", "2/6/21", "Emilia Johansson", 242495),
+    createData("C-00459", "4/19/21", "Jui Hong", 17098246),
+    createData("C-00411", "5/7/21", "Jarl Varg", 923768),
+    createData("C-00412", "5/9/21", "Rober Blake", 8515767),
 ];
 
 const useStyles = makeStyles({
