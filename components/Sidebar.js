@@ -5,7 +5,7 @@ import Picture from "../public/assets/images/k-shuttle.svg";
 const Sidebar = () => {
     return (
         <aside
-            className="position-fixed side-menu vh-100"
+            className="position-fixed side-menu bg-light vh-100"
             data-bs-scroll="true"
             data-bs-backdrop="false"
             tabIndex="-1"
@@ -25,66 +25,70 @@ const Sidebar = () => {
                                     layout={"responsive"}
                                 />
                             </a>
-                            <div className="dash-icons d-flex align-items-center flex-column">
+                            <div className="dashboard-icon dash-icons d-flex align-items-center flex-column  overall-dashboard">
                                 <Link href="/">
                                     <a
-                                        className="p-3 d-flex justify-content-md-end"
+                                        className="p-3 d-flex justify-content-md-end dasboard-icon"
                                         href="">
-                                        <h6 className="d-none d-md-block me-2">
+                                        <h6 className="d-none d-md-block me-2 text-dark  dasboard-icon">
                                             Dashboard
                                         </h6>
-                                        <i className="bx bxs-dashboard"></i>
+                                        <i className="bx bxs-dashboard pt-1 text-dark  dasboard-icon"></i>
                                     </a>
                                 </Link>
                                 <Link href="/booking">
                                     <a
-                                        className="p-3 d-flex justify-content-md-end"
+                                        className="p-3 d-flex justify-content-md-end dasboard-icon"
                                         href="">
-                                        <h6 className="d-none d-md-block me-2">
+                                        <h6 className="d-none d-md-block me-2 text-dark">
                                             Track Order
                                         </h6>
-                                        <i className="bx bx-compass"></i>
+                                        <i className="bx bx-compass text-dark pt-1 text-dark"></i>
                                     </a>
                                 </Link>
                                 <Link href="/calendar">
                                     <a
-                                        className="p-3 d-flex justify-content-md-end"
+                                        className="p-3 d-flex justify-content-md-end dasboard-icon"
                                         href="">
-                                        <h6 className="d-none d-md-block me-2">
+                                        <h6 className="d-none d-md-block me-2 text-dark">
                                             Scheduler
                                         </h6>
-                                        <i className="bx bxs-calendar-alt"></i>
+                                        <i className="bx bxs-calendar-alt pt-1 text-dark"></i>
                                     </a>
                                 </Link>
                                 <Link href="/customers">
                                     <a
                                         className="p-3 d-flex justify-content-md-end"
                                         href="">
-                                        <h6 className="d-none d-md-block me-2">
+                                        <h6 className="d-none d-md-block me-2 text-dark">
                                             Customers
                                         </h6>
-                                        <i className="bx bx-user"></i>
+                                        <i className="bx bx-user text-dark"></i>
                                     </a>
                                 </Link>
 
                                 <a
-                                    className="p-3 d-flex justify-content-md-end"
+                                    className="p-3 d-flex justify-content-md-end dasboard-icon"
                                     href="">
-                                    <h6 className="d-none d-md-block me-2">
+                                    <h6 className="d-none d-md-block me-2 text-dark">
                                         Settings
                                     </h6>
-                                    <i className="bx bx-wrench"></i>
+                                    <i className="bx bx-wrench pt-1 text-dark"></i>
                                 </a>
                             </div>
                         </div>
                         <Link href="/login">
                             <a
                                 className="p-3 d-flex justify-content-md-baseline"
+
+
                                 href="">
-                                <h6 className="d-none d-md-block me-2">
+                                <h6 className="d-none d-md-block me-2 text-dark">
                                     Logout
                                 </h6>
+
                                 <i className="bx bx-log-out"></i>
+
                             </a>
                         </Link>
                     </div>

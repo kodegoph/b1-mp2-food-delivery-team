@@ -60,21 +60,32 @@ const BillingInfo = () => {
         </div>
         <div className="col-12 col-lg-6 p-3 mt-3 text-center">
           <Image
-            src={`https://mykoreankitchen.com/wp-content/uploads/2020/04/1.-Dalgona-Coffee.jpg`}
+            src={`https://mykoreankitchen.com/wp-content/uploads/2019/09/1.-Korean-Green-Salad.jpg`}
             alt={`my-image`}
             height={340}
             width={300}
             objectFit="cover"
           />
-          <p className="card-text">27k Likes </p>
+          <p className="card-text">4k Likes </p>
           <p>Korean Green Salad</p>
+        </div>
+        <div className="col-12 col-lg-6 p-3 mt-3 text-center">
+          <Image
+            src={`https://mykoreankitchen.com/wp-content/uploads/2015/04/2.-Korean-Spicy-Cucumber-Salad.jpg`}
+            alt={`my-image`}
+            height={340}
+            width={300}
+            objectFit="cover"
+          />
+          <p className="card-text">4k Likes </p>
+          <p>KOREAN CUCUMBER SALAD</p>
         </div>
       </div>
       <div className="row">
         <div className="col-12 p-3 mt-3 d-flex justify-content-center">
           <Dropdown>
             <Dropdown.Toggle
-              className="navbar-toggle m-4 bg-color"
+              className="navbar-toggle bg-color "
               variant="primary"
               id="dropdown-Basic"
             >

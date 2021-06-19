@@ -10,7 +10,8 @@ const OrderHistory = () => {
         <div className="d-flex align-items-center">
           <h5 className="p-2">Order Locations</h5>
           <Dropdown>
-        <Dropdown.Toggle variant="primary" id="dropdown-Basic" className="bg-color">
+        <Dropdown.Toggle variant="primary" id="dropdown-Basic" className="bg-color toggle-btn">
+          .
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
@@ -39,10 +40,11 @@ const OrderHistory = () => {
         
       </div>
       <OrderScroll/>
-      <Row className="d-flex justify-content-center mt-1">
-        <p className="p-2">See Full history</p>
-      <Dropdown>
-        <Dropdown.Toggle className="navbar-toggle" variant="primary" id="dropdown-Basic" className="bg-color">
+      <Row className="d-flex justify-content-center mt-2">
+        <p className="m-2">See Full history</p>
+        <Dropdown>
+        <Dropdown.Toggle className="navbar-toggle" variant="primary" id="dropdown-Basic" className="bg-color toggle-history">
+
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
