@@ -1,7 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Names from "./OrderAPI"
+
+
+export async function getStaticProps() {
+  const res = await fetch ('http://localhost:3000/api/hello')
+  const posts = await res.json()
+}
 
 const style = {
   height: 90,
@@ -10,6 +15,8 @@ const style = {
   padding: 8
   
 };
+
+
 
 class OrderScroll extends React.Component {
   state = {
@@ -31,6 +38,8 @@ class OrderScroll extends React.Component {
       });
     }, 200);
   };
+
+  
 
   render() {
     return (
@@ -60,11 +69,6 @@ class OrderScroll extends React.Component {
           "
         >
           <div className="d-flex">
-            <img
-              className="rounded-circle"
-              src="./images/Ellipse 55.svg"
-              style={{width: '60px', height : '60px'}}
-            />
             <div style={{paddingLeft: '0', margin : '10px'}}>
               <span>FirstName LastName</span>
               <p>Number Order #1510031<br /></p>

@@ -6,7 +6,6 @@ import Categories from "../components/grocery/Categories";
 import GrocerySales from "../components/grocery/GrocerySales";
 import HeaderDash from "../components/grocery/HeaderDash";
 import OrderHistory from "../components/grocery/OrderHistory";
-import TicketSales from "../components/grocery/TicketSales";
 import LineChart from "../components/grocery/GroceryChart";
 import Head from "next/head";
 
@@ -14,7 +13,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Dashboard | Grocery</title>
+        <title>Dashboard | K-Suttle</title>
       </Head>
       <section id="admin-dashboard">
         <main className="me-main p-2 h-100 bg-color font-primary">
@@ -43,7 +42,7 @@ const Home = () => {
                         <GrocerySales />
                       </div>
                       <div className="col-12 mb-3">
-                        <TicketSales />
+                       
                       </div>
                     </div>
                   </div>
