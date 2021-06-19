@@ -56,6 +56,16 @@ const Sidebar = () => {
                                         <i className="bx bxs-calendar-alt pt-1 text-dark"></i>
                                     </a>
                                 </Link>
+                                <Link href="/customers">
+                                    <a
+                                        className="p-3 d-flex justify-content-md-end"
+                                        href="">
+                                        <h6 className="d-none d-md-block me-2">
+                                            Customers
+                                        </h6>
+                                        <i className="bx bx-user"></i>
+                                    </a>
+                                </Link>
 
                                 <a
                                     className="p-3 d-flex justify-content-md-end dasboard-icon"
