@@ -10,7 +10,7 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-    {id: "customerid", label: "Transaction ID", minWidth: 150},
+    {id: "customerid", label: "Order Number", minWidth: 150},
     {id: "joindate", label: "Date joined", minWidth: 150},
     {
         id: "custname",
