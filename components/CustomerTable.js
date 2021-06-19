@@ -10,12 +10,8 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-    {id: "customerid", label: "Customer ID", minWidth: 150},
-<<<<<<< Updated upstream
+    {id: "customerid", label: "Transaction ID", minWidth: 150},
     {id: "joindate", label: "Date joined", minWidth: 150},
-=======
-    {id: "joindate", label: "Date joined", minWidth: 170},
->>>>>>> Stashed changes
     {
         id: "custname",
         label: "Customer Name",
@@ -23,14 +19,14 @@ const columns = [
     },
     {
         id: "total",
-        label: "Total spent",
+        label: "Amount",
         minWidth: 150,
         align: "right",
         format: (value) => value.toLocaleString("en-US"),
     },
     {
         id: "last",
-        label: "Last Transaction",
+        label: "Order Status",
         minWidth: 170,
         align: "right",
     },
@@ -41,21 +37,45 @@ function createData(customerid, joindate, custname, total, last) {
 }
 
 const rows = [
-    createData("C-004562", "1/04/20", "Olivia Shine", 3287263, 22),
-    createData("C-00458", "1/04/20", "Rendy Greenlee", 9596961),
-    createData("C-004563", "1/05/20", "Roberto Carlo", 301340),
-    createData("C-004563", "1/07/20", "David Horizon", 9833520),
-    createData("C-00456", "1/10/20", "Oliver Sykes", 9984670),
-    createData("C-004560", "2/14/20", "Danny Worsnop", 7692024),
-    createData("C-00451", "3/5/20", "Jeremy McKinnon", 357578),
-    createData("C-004564", "3/20/20", "Samantha Bake", 70273),
-    createData("C-00459", "9/15/20", "Veronica Vernon", 1972550),
-    createData("C-00457", "11/7/20", "Franky Itadory", 377973),
-    createData("C-00487", "12/5/20", "Jessica Wong", 640679),
-    createData("C-00448", "2/6/21", "Emilia Johansson", 242495),
-    createData("C-00459", "4/19/21", "Jui Hong", 17098246),
-    createData("C-00411", "5/7/21", "Jarl Varg", 923768),
-    createData("C-00412", "5/9/21", "Rober Blake", 8515767),
+    createData("#1510031", "6/19/21", "Olivia Shine", "$263.5", "Pending"),
+    createData(
+        "#1510036",
+        "6/19/21",
+        "Rendy Greenlee",
+        "$250.00",
+        "Not received"
+    ),
+    createData(
+        "#1510018",
+        "6/19/21",
+        "Roberto Carlo",
+        "$150.20",
+        "Shipped out"
+    ),
+    createData("#1510022", "6/18/21", "David Horizon", "$99.95", "Delivered"),
+    createData("#1510025", "6/18/21", "Oliver Sykes", "$95.84", "Delivered"),
+    createData("#1510090", "6/17/21", "Danny Worsnop", "$145.50", "Delivered"),
+    createData(
+        "#1510037",
+        "6/15/21",
+        "Jeremy McKinnon",
+        "$129.00",
+        "Delivered"
+    ),
+    createData(
+        "#1510030",
+        "6/15/21",
+        "Samantha Bake",
+        "$200.00",
+        "Not Delivered"
+    ),
+    createData("#1510038", "6/12/21", "Veronica Vernon", "$20.00", "Delivered"),
+    createData("#1510071", "6/7/21", "Franky Itadory", "$80.00", "Delivered"),
+    createData("#1510001", "6/2/21", "Jessica Wong", "$55.90", "Delivered"),
+    createData("#1510043", "2/6/21", "Emilia Johansson", 242495),
+    createData("#1510019", "4/19/21", "Jui Hong", 17098246),
+    createData("#1510023", "5/7/21", "Jarl Varg", 923768),
+    createData("#1510039", "5/9/21", "Rober Blake", 8515767),
 ];
 
 const useStyles = makeStyles({
