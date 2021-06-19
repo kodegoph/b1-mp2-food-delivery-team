@@ -1,24 +1,26 @@
+/** @format */
+
 @import "variables";
-aside{
-    background-color: #1f1d2b;
-    width: 104px;
-    z-index: 99;
-    a{
-        text-decoration: none;
-        color: $color-primary;
-        p{
-            font-size: 14px;
-        }
+aside {
+  background-color: #1f1d2b;
+  width: 104px;
+  z-index: 99;
+  a {
+    text-decoration: none;
+    color: #333;
+    p {
+      font-size: 14px;
     }
-    a:hover{
-        color: $color-primary-hover;
-    }
+  }
+  a:hover {
+    color: $color-primary;
+  }
 }
-.justify-self-end{
-    justify-self: end;
+.justify-self-end {
+  justify-self: end;
 }
-@media (min-width: 768px){
-    aside{
-        width: 200px;
-    }
+@media (min-width: 768px) {
+  aside {
+    width: 200px;
+  }
 }

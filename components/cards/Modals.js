@@ -222,7 +222,7 @@ const App = () => {
             </div>
           </div>
           <div className="row d-flex justify-content-center m-5">
-            <button className="btn-primary col-6 radius-30">
+            <button className="btn-light col-4 radius-30 bg-color">
               Add new food
             </button>
           </div>
