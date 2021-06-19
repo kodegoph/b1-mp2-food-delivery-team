@@ -23,7 +23,7 @@ const BestSelling = () => {
           />
         <h5 className="mt-3">Kimchi</h5>
         <div className="d-flex justify-content-between align-items-center">
-          <a href="#" className="btn bg-color">
+          <a href="#" className="btn bg-color"   style={{ width: "100px" }}>
             81 Sell
           </a>
 
