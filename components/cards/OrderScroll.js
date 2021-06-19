@@ -66,7 +66,7 @@ class OrderScroll extends React.Component {
               style={{width: '60px', height : '60px'}}
             />
             <div style={{paddingLeft: '0', margin : '10px'}}>
-              <span>Cau  Africa</span>
+              <span>FirstName LastName</span>
               <p>Number Order #1510031<br /></p>
             </div>
           </div>

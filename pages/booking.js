@@ -218,7 +218,7 @@ export const Booking = () => {
                   <h4 className="pt-2">Order Status:</h4>
                   <div className="progress text-center mb-3">
                     <div
-                      className="progress-bar"
+                      className="progress-bar bg-color"
                       role="progressbar"
                       style={{ width: "75%" }}
                       aria-valuenow="75"
