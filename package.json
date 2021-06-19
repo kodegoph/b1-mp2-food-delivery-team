@@ -25,10 +25,6 @@
     "react-dom": "^17.0.2",
     "react-infinite-scroll-component": "^6.1.0",
     "react-map-gl": "^6.1.16",
-<<<<<<< HEAD
-=======
-    "react-minimal-pie-chart": "^8.2.0",
->>>>>>> b873979e7f4fe0b921bccfeffce77e58c1cb6921
     "react-modal": "^3.14.3",
     "react-paginate": "^7.1.3",
     "react-responsive-modal": "^6.1.0",
