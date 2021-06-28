@@ -4,6 +4,7 @@ import React from "react";
 import App from "next/app";
 import Login from "../components/LoginForm";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 // import styles from '../scss/sidebar.css'
 
 class MyApp extends App {

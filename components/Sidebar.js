@@ -34,7 +34,7 @@ const Sidebar = () => {
               <div className="d-flex dashboard-icon dash-icons d-flex align-items-center flex-column  overall-dashboard">
                 <Link href="/">
                   <a
-                    className={`p-3 d-flex justify-content-md-end dasboard-icon ${pathname === '/' ? 'is-active' : '' }`}
+                    className={`p-3 w-100 d-flex justify-content-md-end dasboard-icon ${pathname === '/' ? 'is-active' : '' }`}
                     href=""
                   >
                     <i className="bx bxs-dashboard pt-1 me-2"></i>
@@ -43,7 +43,7 @@ const Sidebar = () => {
                 </Link>
                 <Link href="/booking">
                   <a
-                    className={`p-3 d-flex justify-content-end dasboard-icon ${pathname === '/booking' ? 'is-active' : '' }`}
+                    className={`p-3 w-100 d-flex justify-content-end dasboard-icon ${pathname === '/booking' ? 'is-active' : '' }`}
                     href=""
                   >
                     <i className="bx bx-compass me-2 pt-1"></i>
@@ -52,7 +52,7 @@ const Sidebar = () => {
                 </Link>
                 <Link href="/calendar">
                   <a
-                    className={`p-3 d-flex justify-content-md-end dasboard-icon ${pathname === '' ? 'is-active' : '' }`}
+                    className={`p-3 w-100 d-flex justify-content-md-end dasboard-icon ${pathname === '/calendar' ? 'is-active' : '' }`}
                     href=""
                   >
                     <i className="bx bxs-calendar-alt me-2 pt-1"></i>
@@ -60,7 +60,7 @@ const Sidebar = () => {
                   </a>
                 </Link>
                 <Link href="/customers">
-                  <a className={`p-3 d-flex justify-content-md-end dashboard-icon ${pathname === '/customers' ? 'is-active':  ' '}`} href=""
+                  <a className={`p-3 w-auto d-flex justify-content-md-end dashboard-icon ${pathname === '/customers' ? 'is-active':  ' '}`} href=""
                   >
                     <i className="bx bx-user me-2"></i>
                     <h6 className="d-none d-md-block">Customers</h6>

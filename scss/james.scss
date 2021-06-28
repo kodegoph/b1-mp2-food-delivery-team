@@ -257,3 +257,10 @@ a.forgotpass {
   background-color: $color-primary;
   border-radius: 10px;
 }
+a {
+  .is-active {
+    background: $color-primary;
+    color: white;
+    border-radius: 8px;
+  }
+}
