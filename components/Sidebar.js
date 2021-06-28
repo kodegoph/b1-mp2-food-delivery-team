@@ -2,9 +2,14 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from 'next/router'
 
 import Picture from "../public/assets/images/k-shuttle.svg";
+
 const Sidebar = () => {
+  const { pathname } = useRouter();
+  console.log(pathname)
+
   return (
     <aside
       className="position-fixed side-menu bg-light vh-100"
@@ -29,7 +34,7 @@ const Sidebar = () => {
               <div className="d-flex dashboard-icon dash-icons d-flex align-items-center flex-column  overall-dashboard">
                 <Link href="/">
                   <a
-                    className="p-3 d-flex justify-content-md-end dasboard-icon"
+                    className={`p-3 w-100 d-flex justify-content-md-end dasboard-icon ${pathname === '/' ? 'is-active' : '' }`}
                     href=""
                   >
                     <i className="bx bxs-dashboard pt-1 me-2"></i>
@@ -38,7 +43,7 @@ const Sidebar = () => {
                 </Link>
                 <Link href="/booking">
                   <a
-                    className="p-3 d-flex justify-content-end dasboard-icon"
+                    className={`p-3 w-100 d-flex justify-content-end dasboard-icon ${pathname === '/booking' ? 'is-active' : '' }`}
                     href=""
                   >
                     <i className="bx bx-compass me-2 pt-1"></i>
@@ -47,7 +52,7 @@ const Sidebar = () => {
                 </Link>
                 <Link href="/calendar">
                   <a
-                    className="p-3 d-flex justify-content-md-end dasboard-icon"
+                    className={`p-3 w-100 d-flex justify-content-md-end dasboard-icon ${pathname === '/calendar' ? 'is-active' : '' }`}
                     href=""
                   >
                     <i className="bx bxs-calendar-alt me-2 pt-1"></i>
@@ -55,26 +60,17 @@ const Sidebar = () => {
                   </a>
                 </Link>
                 <Link href="/customers">
-                  <a className="p-3 d-flex justify-content-md-end" href="">
+                  <a className={`p-3 w-auto d-flex justify-content-md-end dashboard-icon ${pathname === '/customers' ? 'is-active':  ' '}`} href=""
+                  >
                     <i className="bx bx-user me-2"></i>
                     <h6 className="d-none d-md-block">Customers</h6>
                   </a>
                 </Link>
 
-                <a
-                  className="p-3 d-flex justify-content-md-end dasboard-icon"
-                  href=""
-                >
-                  <i className="bx bx-wrench pt-1 me-2"></i>
-                  <h6 className="d-none d-md-block">Settings</h6>
-                </a>
               </div>
             </div>
             <Link href="/login">
-              <a
-                className="p-3 d-flex justify-content-md-end dasboard-icon"
-                href=""
-              >
+            <a className= "p-3 d-flex justify-content-md-end dashboard-icon" href="">
                 <i className="bx bx-log-out pt-1 me-2"></i>
                 <h6 className="d-none d-md-block">Logout</h6>
               </a>
@@ -85,5 +81,4 @@ const Sidebar = () => {
     </aside>
   );
 };
-
 export default Sidebar;
