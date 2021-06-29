@@ -57,7 +57,7 @@
 @import "~boxicons";
 // scss-boxicons
 .me-main {
-  margin-left: 104px;
+  margin-left: 200px;
 }
 .bg-color,
 .btn-color {
@@ -69,9 +69,9 @@
 .font-primary {
   color: #333;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .me-main {
-    margin-left: 200px;
+    margin-left: 0;
   }
 }
 .overflow-y-scroll {

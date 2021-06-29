@@ -65,6 +65,19 @@
   height: 100vh;
   margin-left: auto;
 }
+.side-nav{
+  border:none;
+  background: none;
+  font-size: 1.6rem;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+}
+@media (min-width: 768px) {
+  .side-nav{
+    display: none ;
+  }
+}
 .btn {
   margin-top: 0.25rem;
   width: max-content;
@@ -258,7 +271,7 @@ a.forgotpass {
   border-radius: 10px;
 }
 a {
-  .is-active {
+    &.is-active {
     background: $color-primary;
     color: white;
     border-radius: 8px;

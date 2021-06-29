@@ -6,13 +6,13 @@ import { useRouter } from 'next/router'
 
 import Picture from "../public/assets/images/k-shuttle.svg";
 
-const Sidebar = () => {
+const Sidebar = ({sideOpen}) => {
   const { pathname } = useRouter();
-  console.log(pathname)
+  console.log(pathname);
 
   return (
     <aside
-      className="position-fixed side-menu bg-light vh-100"
+      className= {`position-fixed side-menu bg-light vh-100 ${!sideOpen ? 'collapsed' : ''}`}
       data-bs-scroll="true"
       data-bs-backdrop="false"
       tabIndex="-1"
@@ -38,7 +38,7 @@ const Sidebar = () => {
                     href=""
                   >
                     <i className="bx bxs-dashboard pt-1 me-2"></i>
-                    <h6 className="d-none d-md-block">Dashboard</h6>
+                    <h6 className="d-md-block">Dashboard</h6>
                   </a>
                 </Link>
                 <Link href="/booking">
@@ -47,7 +47,7 @@ const Sidebar = () => {
                     href=""
                   >
                     <i className="bx bx-compass me-2 pt-1"></i>
-                    <h6 className="d-none d-md-block">Track Order</h6>
+                    <h6 className="d-md-block">Track Order</h6>
                   </a>
                 </Link>
                 <Link href="/calendar">
@@ -56,14 +56,14 @@ const Sidebar = () => {
                     href=""
                   >
                     <i className="bx bxs-calendar-alt me-2 pt-1"></i>
-                    <h6 className="d-none d-md-block">Scheduler</h6>
+                    <h6 className="d-md-block">Scheduler</h6>
                   </a>
                 </Link>
                 <Link href="/customers">
                   <a className={`p-3 w-auto d-flex justify-content-md-end dashboard-icon ${pathname === '/customers' ? 'is-active':  ' '}`} href=""
                   >
                     <i className="bx bx-user me-2"></i>
-                    <h6 className="d-none d-md-block">Customers</h6>
+                    <h6 className="d-md-block">Customers</h6>
                   </a>
                 </Link>
 
@@ -72,7 +72,7 @@ const Sidebar = () => {
             <Link href="/login">
             <a className= "p-3 d-flex justify-content-md-end dashboard-icon" href="">
                 <i className="bx bx-log-out pt-1 me-2"></i>
-                <h6 className="d-none d-md-block">Logout</h6>
+                <h6 className="d-md-block">Logout</h6>
               </a>
             </Link>
           </div>
